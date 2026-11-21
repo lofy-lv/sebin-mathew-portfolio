@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingContactWidget } from "@/components/ui/FloatingContactWidget";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sebinmathew.com"),
@@ -56,6 +57,7 @@ export default function RootLayout({
         <Navbar />
         <div className="flex-1 pt-20">{children}</div>
         <Footer />
+        <FloatingContactWidget />
       </body>
     </html>
   );
