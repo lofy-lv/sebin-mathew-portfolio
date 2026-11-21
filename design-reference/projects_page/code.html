@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#37393f", "surface-variant": "#33353a", "error-container": "#93000a", "on-surface": "#e2e2e9", "on-tertiary": "#003731", "tertiary": "#3cddc7", "on-secondary": "#4f2500", "on-primary-fixed-variant": "#5516be", "secondary": "#ffb783", "surface-tint": "#d0bcff", "surface-container-lowest": "#0c0e13", "on-primary-container": "#340080", "on-secondary-container": "#451f00", "on-primary-fixed": "#23005c", "tertiary-fixed": "#62fae3", "surface": "#111318", "on-secondary-fixed": "#301400", "on-tertiary-fixed-variant": "#005047", "surface-container-high": "#282a2f", "surface-container-highest": "#33353a", "on-tertiary-fixed": "#00201c", "on-background": "#e2e2e9", "on-secondary-fixed-variant": "#713700", "inverse-surface": "#e2e2e9", "surface-container-low": "#1a1b21", "on-surface-variant": "#cbc3d7", "outline": "#958ea0", "primary": "#d0bcff", "inverse-primary": "#6d3bd7", "secondary-fixed": "#ffdcc5", "tertiary-fixed-dim": "#3cddc7", "primary-fixed-dim": "#d0bcff", "outline-variant": "#494454", "secondary-fixed-dim": "#ffb783", "background": "#111318", "on-error-container": "#ffdad6", "primary-container": "#a078ff", "on-error": "#690005", "on-primary": "#3c0091", "surface-container": "#1e1f25", "primary-fixed": "#e9ddff", "tertiary-container": "#00a392", "on-tertiary-container": "#00302a", "surface-dim": "#111318", "inverse-on-surface": "#2e3036", "secondary-container": "#d97722", "error": "#ffb4ab" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1.25rem", "margin": "2rem", "gutter": "1.5rem", "space-md": "1.25rem", "space-xs": "0.375rem", "space-xl": "3.5rem", "space-sm": "0.75rem", "space-lg": "2rem", "gutter-mobile": "1rem" }, "fontFamily": { "display": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "label-sm": [ "Space Grotesk" ], "label-md": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "display-mobile": [ "Space Grotesk" ], "body-md": [ "Inter" ], "body-sm": [ "Inter" ], "headline-md": [ "Space Grotesk" ] }, "fontSize": { "display": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display-mobile": [ "38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center p-0.5 rounded-full bg-surface-container-high"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrDRMHDjRJPdxnY-CpLmjKv-_qZUvMpEHvDahHM-4FTtdYg1EarhNL24vArr8g4Sw6fWPBmg9pISlf_fW88jyQd9ICHkNPBp2CZ3cVWacK6u2Xyp_ws1yI4bD3gYb1dK5p-2zhJBJcAr-7bOiqbyJGTSl3cEJY1WeJaFD1lsddY6BiPyT12njWkF21-3TeXEIBNjsVc2HSMegFW9GgqaHQgmDZX0V1r8jc2H3bw6QQx4ErNH0WzLXeHkPts"/></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Sebin Mathew</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-0.5">TPM · Tech Lead</span></div></div><nav class="hidden xl:flex items-center gap-space-sm p-1 rounded-xl bg-surface-container-low" data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg"><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="about" href="#">About</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="skills" href="#">Skills</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="process" href="#">Process</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="projects" href="#">Projects</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="case-studies" href="#">Case Studies</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-sm text-label-sm text-tertiary font-medium">Available Immediately in Dubai</span></div><a class="inline-flex items-center justify-center px-space-md py-2.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary text-on-primary font-headline-sm text-label-md font-semibold shadow-[0_10px_20px_-8px_rgba(251,146,60,0.4)] hover:brightness-110 transition-all" data-path="contact" href="#">Get in Touch</a></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Accents -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary-container/20 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-10 right-10 w-80 h-80 bg-secondary/15 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute top-96 left-10 w-96 h-96 bg-tertiary-container/10 rounded-full blur-[160px] pointer-events-none"></div>
+<!-- Main Container Section -->
+<div class="max-w-[1400px] w-full mx-auto px-margin-mobile lg:px-margin py-8 md:py-12 flex flex-col gap-10">
+<!-- HEADER BLOCK -->
+<div class="flex flex-col gap-6">
+<!-- Breadcrumb & Directory Badge -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-base">home</span> Home
+            </a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Projects</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Portfolio Directory · 34+ Deliveries</span>
+</div>
+</div>
+<!-- Title & Subtitle Asymmetric Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+<div class="lg:col-span-8 flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Engineered Platforms &amp; Shipped Systems</span>
+</div>
+<h1 class="font-display text-headline-lg lg:text-display text-on-surface tracking-tight leading-none">
+              My <span class="bg-gradient-to-r from-primary-container via-primary to-secondary bg-clip-text text-transparent">Projects</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl pt-1">
+              A comprehensive archive of high-throughput web platforms, SaaS ecosystems, cross-platform mobile apps, and agentic AI automations delivered from discovery to scaled production.
+            </p>
+</div>
+<!-- Quick Metrics Bento Bar -->
+<div class="lg:col-span-4 flex items-center justify-end">
+<div class="w-full grid grid-cols-3 sm:grid-cols-5 gap-2 p-2.5 rounded-xl bg-surface-container-low backdrop-blur-xl shadow-lg">
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container/60 text-center">
+<span class="font-display text-headline-sm text-primary font-bold leading-none">34</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Total</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container/60 text-center">
+<span class="font-display text-headline-sm text-tertiary font-bold leading-none">28</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Shipped</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container/60 text-center">
+<span class="font-display text-headline-sm text-secondary font-bold leading-none">4</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Ongoing</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container/60 text-center">
+<span class="font-display text-headline-sm text-primary-fixed-dim font-bold leading-none">2</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Planning</span>
+</div>
+<div class="col-span-3 sm:col-span-1 flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-high/80 text-center">
+<span class="font-display text-headline-sm text-tertiary-fixed font-bold leading-none">100%</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">CSAT</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CONTROLS BAR: Filters, Search & View Sorter -->
+<div class="p-3 md:p-4 rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-md flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+<!-- Interactive Category Filter Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none" id="filter-container">
+<button class="filter-btn active flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-primary-container to-secondary text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all whitespace-nowrap" data-filter="all">
+<span>All Projects</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest/40 text-on-primary text-[10px] font-bold">34</span>
+</button>
+<button class="filter-btn flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all whitespace-nowrap" data-filter="web-platform">
+<span>Web Platform</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest text-primary text-[10px] font-semibold">12</span>
+</button>
+<button class="filter-btn flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all whitespace-nowrap" data-filter="saas">
+<span>SaaS</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest text-secondary text-[10px] font-semibold">8</span>
+</button>
+<button class="filter-btn flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all whitespace-nowrap" data-filter="mobile-app">
+<span>Mobile App</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest text-tertiary text-[10px] font-semibold">5</span>
+</button>
+<button class="filter-btn flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all whitespace-nowrap" data-filter="ai-automation">
+<span>AI &amp; Automation</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest text-primary-fixed-dim text-[10px] font-semibold">5</span>
+</button>
+<button class="filter-btn flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all whitespace-nowrap" data-filter="business-websites">
+<span>Business Websites</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant text-[10px] font-semibold">4</span>
+</button>
+</div>
+<!-- Search Bar and Sort Options -->
+<div class="flex items-center gap-3">
+<div class="relative flex-1 sm:w-80">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+<input class="w-full pl-10 pr-12 py-2 rounded-xl bg-surface-container text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="project-search" placeholder="Search projects, stack, role..." type="text"/>
+<kbd class="hidden sm:inline-flex absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-highest font-label-sm text-[10px] text-outline uppercase tracking-wider font-mono">⌘K</kbd>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container text-on-surface-variant text-body-sm shrink-0 cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-base">swap_vert</span>
+<span class="font-label-md text-label-md hidden md:inline">Sort: Newest</span>
+</div>
+</div>
+</div>
+<!-- 4-COLUMN RESPONSIVE GRID (16 CARDS) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="projects-grid">
+<!-- CARD 1: Virtune Realtors -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="ai-automation">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="High tech dark themed AI real estate management platform screenshot showing vector matching analytics graph, property price predictors, luxury villa catalog thumbnails and algorithmic match score meters with deep violet and teal accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGZWSh7UV7ub0FTMfTR8MGkBRMRf0QL7QsKniGILJ2d8WvfMDPKwN4FtptmdaiOggrgDdsPeN406n11JeiJuL6c8TxS8u0y6RBxY6Ub1JcUBHR27dy8YABpFKJWur1Pod8qZuccXQ2DgBhVox0610xrdNRoeREUOqIZb9FE7Q0M-j7k-ct-_6ODGAfe7oPf3VKZbTvGBftR_iqyyd_Gt6OWeETcFaO4nV6if23rQTv')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary/20 backdrop-blur-md text-primary font-label-sm text-[11px] font-semibold tracking-wide">AI &amp; Automation</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Virtune Realtors</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Architected generative real-estate recommendation engine with vector embeddings. Automated multi-criteria lead scoring and property indexing pipeline reducing broker triage latency by 68%.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Next.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Vector DB</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Python FastAPI</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Tailwind</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 2: Connective India -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="web-platform">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Dark aesthetic B2B commerce platform with supplier discovery directories, enterprise vendor profile cards, compliance certification badges, and real-time query chat interface with clean cyan indicators" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIkx7AGrkVTJraK71WMD6Fs-64fkZ_waQBCCV96t4ZiK4auFKfXXyit3xyocSjsPje4EHY-XOs0Beau4jHLY6JH05zGdTGP6pnG8WAit01k1I23Df676GS-Cvg0NSjQM0Bk_eycQudi_PnvyTmCYexfMDv6NHP1KhTluUWMClZAmcTM9fjlajrkeJG6tstiNeirhbii_sswfrFkpBszdbXPvJ6u8Z6dOfEgUntuGGV')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/30 backdrop-blur-md text-primary font-label-sm text-[11px] font-semibold">Web Platform</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Connective India</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                MSME ecosystem facilitating enterprise discovery and vendor procurement. Led sprint ceremonies, PRD specifications, and microservice decoupled architecture serving 14,000+ business entities.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">React</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Node.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">PostgreSQL</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">AWS S3</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 3: ManWish Online -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="saas">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Multi-tenant enterprise SaaS dashboard shown on a dark laptop display with revenue trend spline graph, partner onboarding funnels, automated commission payout logs and role based permission matrices" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBshzsvEtiE75K6FmlVVgd105hic_zDxti1KVjftr6CfxIvUxN0Mf17nCnBErPxknOBCs0bnjWDJx9qU5MkuHXL_gghKr3bYNTwebdapbqIrBDrSEgEu38YCLHFcMMlZAFIUWlsEmg8Zs9kPxT9nDv-mGwimGFiZ-6b43tW6peVi6uyD1AoTVYh5tS3XnjgpE7RUGN6sYp87kfwjQzac2Egc69I4-kH6eCPe4D0zchR')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/40 backdrop-blur-md text-secondary font-label-sm text-[11px] font-semibold">SaaS</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">ManWish Online</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Governed product discovery &amp; full-cycle roadmap for a multi-tenant B2B vendor engine. Built automated partner commission math, multi-tenant RBAC permissions, and dispute resolution workflows.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Multi-Tenant</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">RBAC</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Next.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">MongoDB</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 4: Creative Stitching (Uses Mandatory Placeholder https://lh3.googleusercontent.com/aida/ALJJyrCIYQyLYiK3h31FiCoYtULsQitmPvpGfycwrK7LF06xuOAwEPfw7oS_XhKv-shY1vomGP4Yf3OrvriGjCafphXM1opaBGp3CrkOePm18gcfoeC8kA1gqHIHA9EkJnc1LDFPAGsVwJ0m0Gr-U6nYBjzN4SfJ1pOfOq0vtBEm4h4kX7JzH79camAUsaRWwRQ9scgr11wIXoSBImK1Cxg-QgE8vbWOyks1KPw2rng9GZNhmw) -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="mobile-app">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<img alt="Creative Stitching LMS Mobile Platform Mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ALJJyrCIYQyLYiK3h31FiCoYtULsQitmPvpGfycwrK7LF06xuOAwEPfw7oS_XhKv-shY1vomGP4Yf3OrvriGjCafphXM1opaBGp3CrkOePm18gcfoeC8kA1gqHIHA9EkJnc1LDFPAGsVwJ0m0Gr-U6nYBjzN4SfJ1pOfOq0vtBEm4h4kX7JzH79camAUsaRWwRQ9scgr11wIXoSBImK1Cxg-QgE8vbWOyks1KPw2rng9GZNhmw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-semibold">Mobile App</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Creative Stitching</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Led requirement elicitation and product delivery for an EdTech video LMS built in Flutter. Integrated encrypted DRM video pipelines and payment webhooks for instantaneous course unlocks.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Flutter</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Video DRM</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Razorpay</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Firebase</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 5: MilliJobs Portal -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="web-platform">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Recruitment dashboard monitor screen displaying candidate pipeline kanban cards, automated resume scoring filters, job vacancy matrices and real-time interview schedule widgets in obsidian dark theme" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDj9etwM9Lxjx1Zw_zgsucvhh-tZNifL0eitE0KEBFGE4aONiOtBC9ar8xhK_kDAQYhBpAH0e3TZOGzTeuMvPN-X4rqoTBK4GbP1YQ2POzzrkx0RAxCmx9hXM-X4__nJ0ekANacIrJ9oL2s_DyO2WaFT5sIcUWwxqoe6WrSD5P0EkkIsXiKQTsFxH2K01g0aDBAsEXr-4hNR_A_aF_z52L-xzkKyREo0Z1prnR6qW_E')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/30 backdrop-blur-md text-primary font-label-sm text-[11px] font-semibold">Web Platform</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">MilliJobs Portal</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Steered recruitment pipeline optimization and search query index restructuring, cutting database wait states by 46% during high-volume applicant intake spikes.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Elasticsearch</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Express</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">React</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Redis</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 6: KeralaPlots (Uses Mandatory Placeholder https://lh3.googleusercontent.com/aida/ALJJyrApZ3mKiYNNQJTWXEQPimTNmMXuTV3UHWrEn3STvLoh0w_dq3ezAaaMBcNqP8QT9tqOH3vA5GFQb7WdAUmRANilhZLtMWsLaPFpmPk05xTMyu-4jykSapv8GuGe2DsCh62rc7UKzaxZMHjkeJESombP9CfmeNFQa_6ICBz6oRpAwip9t-N4EMfji1XDqc70uBV9KvrSK3q8HuS6u_il-NXaV0rXDP132vOYEydTyhBi2Q) -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="web-platform">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<img alt="KeralaPlots Real Estate Marketplace Web Application" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ALJJyrApZ3mKiYNNQJTWXEQPimTNmMXuTV3UHWrEn3STvLoh0w_dq3ezAaaMBcNqP8QT9tqOH3vA5GFQb7WdAUmRANilhZLtMWsLaPFpmPk05xTMyu-4jykSapv8GuGe2DsCh62rc7UKzaxZMHjkeJESombP9CfmeNFQa_6ICBz6oRpAwip9t-N4EMfji1XDqc70uBV9KvrSK3q8HuS6u_il-NXaV0rXDP132vOYEydTyhBi2Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/30 backdrop-blur-md text-primary font-label-sm text-[11px] font-semibold">Web Platform</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">KeralaPlots</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Managed product lifecycle from technical specifications to commercial launch for a geo-indexed real estate marketplace serving licensed builders and land purchasers.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">GeoSpatial</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Next.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Mapbox</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Stripe Tiering</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 7: Neethu's Study Abroad -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="web-platform">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="High stakes medical exam simulation interface dashboard showing timed clinical question blocks, cardiovascular diagnostic stem, interactive answer selection, and real-time live candidate session timer with precision scorecard metrics" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPG_GyRDc3qtIH36YJOeCfoHNSiAEYfHsAdEDnSV97bNXx9HgQpwx7x_skm2OWzi14vIjdrn-_9KlVNlJeJ1SnZzVuau1MWM-6KJyCd3Om0NkKopYqpM-r34BKoC-UDXpXEvhX9HrZ8P_bNalXJ5gukgGo3bCmzbuElhoS0LXoQUI0K6UWWqNF18iIxMGuCPD5V3voYEPKOjErQVdJe8F0kHwutk9RgYtZoGpGed1E')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/30 backdrop-blur-md text-primary font-label-sm text-[11px] font-semibold">Web Platform</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Neethu's Study Abroad</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Governed high-concurrency medical exam simulation portal with timed randomized block questions, anti-cheat session heartbeats, and zero session dropouts across thousands of clinical candidates.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Real-Time WS</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Node.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">PostgreSQL</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">AWS Autoscaling</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 8: Tribe Salon -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="business-websites">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="High-end beauty and luxury salon booking interface website with aesthetic dark minimalist typography, appointment slot calendar, stylist selection cards, and gold accent visual style" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApIcSt0kmT4NzB-rD1GL92CoarEE57RCXpH4sf1uOejZcISNVm_shPi_dnDjtb7fW3dJEUDt4Er4R5O2XBXIKGUz4Ob9h-QTM8P6tVlIeCMOq-F2CNhHOKOq05I7Wu59XpqfnlcpgCO67hlvh8qQU3EZXkhs4wIPIWoZrGBojOm-e9DaTdjspL4vV9aEbwTHd8dEF1BHwSuYi3WBfeY9G5gbNH8ddzqbcZ57Hxp-tv')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/60 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold">Business Websites</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Tribe Salon</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Luxury salon digital presence featuring live multi-seat appointment booking, stylist schedule synching, automated WhatsApp reminder dispatch, and POS payment integration.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Next.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Twilio API</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Tailwind</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Supabase</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 9: Aura Airport Hotel -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="web-platform">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Sophisticated dark hotel booking reservation platform showing live flight arrival tracking widget, premium room suites gallery, and instant room keyless check-in pass UI" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2UgriEUmXwzlIh4cdEAFHChQ3P1fM1FoJbhKsAKm5csHR8bOku8Qb60f2BKri1Mpra74lBrnVWXefcyuNOf6vnL44Lfv92ipvrOhiNIg7zGSvx2CW3VvO-lF0W8Hru7Zawm4OjRjrr3_RxQUow5GDPqJUTAjWIPbyAE8H0hwtBsy4-nYwejyRmQ9bz1AyRebvEH6BhGMiYN4r2KQ00c14WQdU8Iho-ZZzikF6iD_J')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/30 backdrop-blur-md text-primary font-label-sm text-[11px] font-semibold">Web Platform</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Aura Airport Hotel</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Transit hospitality direct reservation engine with dynamic room tariff calculator, real-time availability checks, and integrated airline arrival delayed-checkin accommodation workflows.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Next.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Booking Engine</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Stripe</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Channel Mgr</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 10: DRKS Aesthetics -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="saas">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Clinical health records and aesthetic clinic appointment platform with HIPAA compliant patient records timeline, medical intake form, and treatment before-after image management module in dark mode" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBi-nDIvvvv6XEs7Ed9Nvkav2rUOXnXhsuQzVRSY4JLtzBtSyXoNeJC9jevi2G5zOzWrg5Cz6-BTPavHGb0wgqQ_b_zYXmcM6w_KZjCfksMhS3ucYeydyR22qzb1eO38ebJfbmtVW2z_wOYvNhXlgOoYZmaqbQrfkgixKJCu6iTldAWRsp08vhXXZ9WK7KA6RQW85U9dGUa0Al3WYhfxiVkbBMU_LcCDAoq7_9J-puR')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/40 backdrop-blur-md text-secondary font-label-sm text-[11px] font-semibold">SaaS</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/30 backdrop-blur-md text-secondary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> Ongoing
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">DRKS Aesthetics</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Spearheading active release cycle for a clinical SaaS CRM with automated patient intake forms, encrypted medical photo archives, and doctor prescription dispatch logs.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">React</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">HIPAA Compliant</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Node.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Encrypted S3</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> Sprint 8 Active
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-secondary-container text-on-surface hover:text-on-secondary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 11: Comorin Solar -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="web-platform">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Renewable solar energy estimation web app featuring rooftop satellite mapping, energy yield calculator graphs, ROI amortization chart, and instant equipment quotation generator in sleek dark theme" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3vX2_XKUoOGmWCYMdwCqjR4-uDi7RtI2eSELoKWvn4nJnk7KngK70-Bqs5sMC45XxEvmhpyGrQVT_CwWjQdVkQJFUPDjHob0SU4fx4tM-rA50ircBfnzaX1Z4DdG4xp55Cfcaztv2XZmPEBCpYrFPsXXI4S1BtGADRJdMWqpA8DkADlAr3B3GDbxj2ogr2sG-QahCnXS5IH-RP6S5p8kjeg5QHGlrOmC18SPbI7AJ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/30 backdrop-blur-md text-primary font-label-sm text-[11px] font-semibold">Web Platform</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Comorin Solar</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Solar ROI simulator &amp; enterprise commercial lead engine. Managed client discovery, algorithm validation for kilowatt generation formulas, and CRM API pipe synch.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Vue.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Chart.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Lead Engine</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">FastAPI</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 12: Vedapuri Ayurveda -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="web-platform">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Ayurvedic health tele-consultation platform and botanical ecommerce portal with doctor video booking scheduling slots, herbal prescription cart, and holistic health dashboard in deep green and dark obsidian styling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2lPPyWvFjqH5OpiZprBjiVC97UiOHIljYiFUfxgytRcG06_kQpOnQ2kTN8cNSOv83zKk7VfrJlXK9nD2nvBkWqvRA3XX03smRXgelfv1nZAHFGaTaEC6f5I5iu2EEpVBjHvKpXsqxlTpS-fBfpdHd9QbZ5yAgm-GlT1FPN5RuDBRwQUOxsuRgDoN_cJA0Dld1DYhtTVG0ixTGGdxNNEgur1Bp2AfPPIBmAAbWR1Fe')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/30 backdrop-blur-md text-primary font-label-sm text-[11px] font-semibold">Web Platform</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Vedapuri Ayurveda</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Unified tele-consultation portal and herbal medicine checkout system. Orchestrated video WebRTC integration, doctor prescription drafting, and international shipping calculators.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">WebRTC</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">WooCommerce</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Next.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Payment API</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 13: Southern Foods Global -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="business-websites">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="International food distribution and spice export B2B web catalog showing containers, shipping compliance documents, container cargo tracking widget, and dynamic wholesale currency converter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfz1-qywh5IP3AAn0DNrarW1q_4jw4Im4WTl-hgCQG63vBHbYKdkd0ckhdc61_tCQ8W-fgq6mOv1P_jUpCjNSq7mSOhj-mUrFApRvpUATtr15yiMSN4rfXuXbZPW1qNBNnorpEUBWM5BtsKq246duD2gNqqY8hOV0kjUYsaHrLTYA_gS3jQrfRPquU88zjBchETHurLES3Zvcg_88xQM4SxzidzhZtCW2VQ8bVHYEJ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/60 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold">Business Websites</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Southern Foods Global</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Export B2B product showcase delivering multi-currency FOB quoting, container load optimization algorithms, and international trade compliance validation workflows.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Headless CMS</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">GraphQL</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Tailwind</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Multi-Currency</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 14: Lakeside Marathon -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="web-platform">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Marathon athletics event portal displaying runner race bib generator, split timing checkpoints leaderboard, topographic course elevation map, and dynamic digital finisher certificates in dark cyberpunk style" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGVrLmBBG32c9AkINyb5ZzNGxCsbFieERPxXXUz-B3rPP7X90KoKW20DdxcQrRaI_uRnrtAlFcmk1PSCx_Y-tVbw4PU8oNu68_OYBpmnVp_6xNcJJ5856EZ0E7X3eV7lY9ZGRn4kqmJZW6HkkM_F73gPDrW6wVvokRwbK6oSudTd-lbaro9wutXOlSuOhe-FqlarDPPA9hxFtuQzaH0EhYIuWOXYInlRoGCCyWdg3b')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-container/30 backdrop-blur-md text-primary font-label-sm text-[11px] font-semibold">Web Platform</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Lakeside Marathon</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                High-throughput endurance race registration and RFID timing ingest engine. Automated customized BIB print generation and instant finisher certificate rendering for 6,000+ runners.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">React</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">PDF Generation</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Express.js</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">PostgreSQL</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 15: Harman Motors -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="business-websites">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Luxury pre-owned automotive dealership web portal showing sleek sports cars gallery, 360 degree vehicle inspect view, trade-in valuation calculator, and VIP test-drive scheduling form" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFOLqu4Z1R6jVK2a5op7KIkVIAxCRqkhMwLprPuzgPPjJllg2f2S09lNQmAtmiU8o-73Va5_VNwwl2iJB-KXz-g5Mb0TQGb2vbET7GSDx-OW4aHtuz6iGAMUK1QwCwD8I3fOV-RMntvU3bTrV-jDI1E3dn-ba2F08HGhb7jvWL3cQSRJFALEY2CteO2oafNeUFT3jRkbW1a0Ch9ybD7N1PF2x2JpMoO-SWPuq2uPy6')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/60 backdrop-blur-md text-on-surface font-label-sm text-[11px] font-semibold">Business Websites</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/30 backdrop-blur-md text-tertiary-fixed font-label-sm text-[11px] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Shipped
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Harman Motors</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Pre-owned premium automotive showroom catalog featuring fast VIN indexing, dynamic EMI calculators, instant VIP test drive slot reservations, and trade-in appraisals.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Next.js 14</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Automotive CRM</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">Cloudinary</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">WhatsApp API</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Live System
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Details
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 16: AI Workflow Copilot (SPECIAL PLACEHOLDER STATE / NDA PROTECTED) -->
+<div class="project-card group flex flex-col rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 overflow-hidden" data-category="ai-automation">
+<div class="relative aspect-[16/10] w-full overflow-hidden bg-surface-container-highest flex items-center justify-center">
+<!-- Architectural Blueprint Grid / NDA Graphic State -->
+<div class="absolute inset-0 bg-[radial-gradient(#33353a_1px,transparent_1px)] [background-size:16px_16px] opacity-70"></div>
+<div class="relative flex flex-col items-center gap-2 p-4 text-center z-10">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shadow-inner">
+<span class="material-symbols-outlined text-2xl">lock</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface font-semibold uppercase tracking-wider">Mockup In Sprint / NDA Protected</span>
+<span class="font-label-sm text-[10px] text-outline font-mono">Architecture Blueprint v1.4</span>
+</div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 z-20">
+<span class="px-2.5 py-1 rounded-full bg-primary/20 backdrop-blur-md text-primary font-label-sm text-[11px] font-semibold">AI &amp; Automation</span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/30 backdrop-blur-md text-primary-fixed font-label-sm text-[11px] font-medium z-20">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Planning
+            </div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">AI Workflow Copilot</h3>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-base">lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Architecting an enterprise multi-agent task orchestrator connecting autonomous LLM agents with automated webhook triggers, JIRA issue triaging, and PRD generation.
+              </p>
+</div>
+<div class="flex flex-col gap-3.5 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">n8n Flow</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">LangChain</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">FastAPI</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">OpenAI API</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-primary-fixed-dim font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">hourglass_top</span> In Active Sprint
+                </span>
+<a class="px-3 py-1 rounded-lg bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary font-label-sm text-[11px] font-semibold transition-all" href="#">
+                  Inquire
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- PAGINATION & LOAD MORE MODULE -->
+<div class="flex flex-col items-center justify-center gap-4 py-8">
+<div class="flex flex-col items-center gap-2">
+<div class="w-64 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="w-[47%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">Showing <span class="text-on-surface font-semibold">16</span> of <span class="text-on-surface font-semibold">34</span> projects delivered</p>
+</div>
+<button class="group flex items-center gap-2.5 px-6 py-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-all hover:shadow-lg" id="load-more-btn">
+<span>Load More Shipped Platforms</span>
+<span class="material-symbols-outlined text-lg group-hover:translate-y-0.5 transition-transform text-primary">expand_more</span>
+</button>
+</div>
+<!-- BOTTOM BANNER / PM TALENT HIRE CTA -->
+<div class="relative rounded-3xl bg-gradient-to-br from-surface-container-low via-surface-container to-surface-container-low p-8 md:p-12 overflow-hidden shadow-2xl">
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary-container/20 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute -left-20 -top-20 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+<div class="flex flex-col gap-3 max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-container/20 text-tertiary-fixed font-label-sm text-[11px] font-semibold w-fit">
+<span class="material-symbols-outlined text-sm">schedule</span> Available Immediately in Dubai
+            </div>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface tracking-tight leading-tight">
+              Need a dedicated Technical PM for your next web, mobile or SaaS build?
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              From requirement roadmapping to high-concurrency cloud delivery, let's discuss scope, engineering architecture, and delivery milestones.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-4 shrink-0">
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary text-on-primary font-headline-sm text-label-md font-semibold shadow-[0_10px_20px_-8px_rgba(251,146,60,0.4)] hover:brightness-110 transition-all" href="#">
+<span>Discuss Project Scope</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md font-semibold transition-all" href="tel:+971501725004">
+<span class="material-symbols-outlined text-tertiary text-lg">call</span>
+<span>+971 50 172 5004</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple client-side category filter & search interaction
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    const searchInput = document.getElementById('project-search');
+
+    function applyFilterAndSearch() {
+      const activeBtn = document.querySelector('.filter-btn.active');
+      const activeCategory = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+      const query = (searchInput.value || '').toLowerCase().trim();
+
+      projectCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const textContent = card.innerText.toLowerCase();
+
+        const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+        const matchesQuery = query === '' || textContent.includes(query);
+
+        if (matchesCategory && matchesQuery) {
+          card.classList.remove('hidden');
+          card.classList.add('flex');
+        } else {
+          card.classList.remove('flex');
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => {
+          btn.classList.remove('active', 'bg-gradient-to-r', 'from-primary-container', 'to-secondary', 'text-on-primary', 'font-semibold', 'shadow-sm');
+          btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+
+        button.classList.add('active', 'bg-gradient-to-r', 'from-primary-container', 'to-secondary', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        button.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+        applyFilterAndSearch();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFilterAndSearch);
+    }
+
+    // Keyboard shortcut CMD+K / CTRL+K
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchInput?.focus();
+      }
+    });
+
+    // Mock Load More Button Feedback
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        loadMoreBtn.innerHTML = `
+          <span class="material-symbols-outlined animate-spin text-lg text-primary">sync</span>
+          <span>Loading Shipped Records...</span>
+        `;
+        setTimeout(() => {
+          loadMoreBtn.innerHTML = `
+            <span class="material-symbols-outlined text-lg text-tertiary">check_circle</span>
+            <span>All 34 Projects Displayed</span>
+          `;
+          loadMoreBtn.classList.add('opacity-75', 'cursor-default');
+        }, 600);
+      });
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-lowest"><div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface">Sebin Mathew</span><span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary">PMP · CSM</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Technical Project Manager &amp; Business Analyst delivering 34+ web, SaaS, and AI products across fintech, logistics, and enterprise ecosystems.</p></div><div class="md:col-span-3 flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">Navigation</span><div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="about" href="#">About Expertise</a><a class="hover:text-primary transition-colors" data-path="skills" href="#">Core Competencies</a><a class="hover:text-primary transition-colors" data-path="process" href="#">Agile Framework</a><a class="hover:text-primary transition-colors" data-path="projects" href="#">Delivered Products</a><a class="hover:text-primary transition-colors" data-path="case-studies" href="#">In-Depth Case Studies</a></div></div><div class="md:col-span-4 flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">Dubai Contact Coordinates</span><div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-base">location_on</span><span>Dubai, United Arab Emirates</span></div><div class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-base">call</span><a class="hover:text-on-surface transition-colors" href="tel:+971501725004">+971 50 172 5004</a></div><div class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-base">mail</span><a class="hover:text-on-surface transition-colors" href="mailto:sebinmdom@gmail.com">sebinmdom@gmail.com</a></div><div class="flex items-center gap-space-sm pt-2"><a aria-label="Connect" class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-base">code</span></a><a aria-label="Professional Profile" class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-base">share</span></a></div></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant"><p>© 2025 Sebin Mathew. All rights reserved.</p><div class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>Residence Visa &amp; Immediate Onboarding in UAE</span></div></div></div></footer></body></html>
