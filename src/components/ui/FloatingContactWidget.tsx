@@ -33,9 +33,9 @@ export function FloatingContactWidget() {
         <a
           href={siteConfig.contact.phoneHref}
           aria-label={`Call Sebin Mathew in UAE at ${siteConfig.contact.phone}`}
-          className="w-12 h-12 rounded-full bg-[#1D2330]/90 backdrop-blur-md border border-secondary/40 text-secondary hover:text-white hover:bg-secondary/20 hover:border-secondary hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center shadow-lg shadow-black/50 group focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-surface"
+          className="relative w-14 h-14 rounded-full bg-[#1D2330]/95 backdrop-blur-md border border-secondary/40 text-secondary hover:text-white hover:bg-secondary/25 hover:border-secondary shadow-xl shadow-black/50 hover:shadow-2xl hover:shadow-secondary/20 hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-surface"
         >
-          <Icons.Phone size={19} className="transition-transform group-hover:rotate-12" />
+          <Icons.Phone size={24} className="transition-transform group-hover:rotate-12" />
         </a>
       </div>
 
@@ -64,7 +64,7 @@ export function FloatingContactWidget() {
           aria-label="Chat with Sebin Mathew on WhatsApp"
           className="relative w-14 h-14 rounded-full bg-gradient-to-tr from-[#25D366] to-[#2DD4BF] text-white shadow-xl shadow-[#25D366]/30 hover:shadow-2xl hover:shadow-[#25D366]/50 hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#2DD4BF] focus:ring-offset-2 focus:ring-offset-surface"
         >
-          <Icons.WhatsApp size={28} className="drop-shadow-sm transition-transform group-hover:scale-110" />
+          <Icons.WhatsApp size={24} className="drop-shadow-sm transition-transform group-hover:scale-110" />
 
           {/* Online / Active Badge Indicator */}
           <span
