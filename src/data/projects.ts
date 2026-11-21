@@ -41,8 +41,8 @@ export const projectsData: Project[] = [
     featured: true,
   },
   {
-    id: "manwish-online",
-    title: "ManWish Online",
+    id: "manvish-online",
+    title: "Manvish Online",
     category: "saas",
     categoryLabel: "SaaS",
     status: "shipped",
@@ -51,7 +51,7 @@ export const projectsData: Project[] = [
     tags: ["Multi-Tenant", "RBAC", "Next.js", "MongoDB"],
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBshzsvEtiE75K6FmlVVgd105hic_zDxti1KVjftr6CfxIvUxN0Mf17nCnBErPxknOBCs0bnjWDJx9qU5MkuHXL_gghKr3bYNTwebdapbqIrBDrSEgEu38YCLHFcMMlZAFIUWlsEmg8Zs9kPxT9nDv-mGwimGFiZ-6b43tW6peVi6uyD1AoTVYh5tS3XnjgpE7RUGN6sYp87kfwjQzac2Egc69I4-kH6eCPe4D0zchR",
-    liveUrl: "https://manwishonline.in",
+    liveUrl: "https://manvishonline.in",
     metrics: "Multi-vendor automated reconciliation",
     featured: true,
   },

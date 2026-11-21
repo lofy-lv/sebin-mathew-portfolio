@@ -25,9 +25,11 @@ export interface Project {
 export type SkillCategory = "all" | "agile" | "code" | "ai" | "devops";
 
 export interface SkillItem {
+  id: string;
   name: string;
   category: "agile" | "code" | "ai" | "devops";
-  iconName: string; // Lucide or custom SVG name
+  iconKey: string;
+  brandColor: string;
   level?: string;
 }
 

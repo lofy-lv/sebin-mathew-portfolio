@@ -1,9 +1,42 @@
 "use client";
 
 import React, { useState } from "react";
-import { SkillCategory } from "@/types";
+import { SkillCategory, SkillItem } from "@/types";
 import { skillCategories, skillsData } from "@/data/skills";
-import { DynamicIcon } from "@/components/ui/Icons";
+import { BrandIcon } from "@/components/home/BrandIcon";
+
+function SkillCard({ skill }: { skill: SkillItem }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="flex flex-col items-center gap-2.5 group cursor-pointer w-full text-center"
+    >
+      <div
+        className="w-16 h-16 rounded-2xl bg-surface-container border border-outline-variant/40 flex items-center justify-center p-3.5 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:bg-surface-container-high"
+        style={{
+          color: hovered ? skill.brandColor : "#A1A1AA",
+          borderColor: hovered ? `${skill.brandColor}99` : undefined,
+          boxShadow: hovered
+            ? `0 12px 24px -6px ${skill.brandColor}40`
+            : undefined,
+        }}
+      >
+        <BrandIcon iconKey={skill.iconKey} size={28} />
+      </div>
+      <span
+        className="font-label-sm text-xs transition-colors duration-200 text-center font-medium leading-tight px-1 whitespace-nowrap overflow-visible"
+        style={{
+          color: hovered ? "#F8FAFC" : "#A1A1AA",
+        }}
+      >
+        {skill.name}
+      </span>
+    </div>
+  );
+}
 
 export function SkillsMatrix() {
   const [activeCategory, setActiveCategory] = useState<SkillCategory>("all");
@@ -25,7 +58,7 @@ export function SkillsMatrix() {
             Skills & Tools
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant">
-            Battle-tested toolchains spanning agile PM frameworks, web engineering, modern AI co-pilots, and infrastructure.
+            Battle-tested toolchains spanning agile PM frameworks, web engineering, modern AI co-pilots, and cloud infrastructure.
           </p>
         </div>
 
@@ -49,24 +82,10 @@ export function SkillsMatrix() {
           })}
         </div>
 
-        {/* Skills Grid */}
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-y-7 gap-x-4 justify-items-center pt-4">
-          {filteredSkills.map((skill, index) => (
-            <div
-              key={`${skill.name}-${index}`}
-              className="flex flex-col items-center gap-2 group cursor-pointer"
-            >
-              <div className="w-16 h-16 rounded-2xl bg-surface-container border border-outline-variant/40 flex items-center justify-center p-3.5 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:border-primary/60 group-hover:shadow-glow-violet group-hover:bg-surface-container-high">
-                <DynamicIcon
-                  name={skill.iconName}
-                  size={28}
-                  className="text-on-surface group-hover:text-primary transition-colors"
-                />
-              </div>
-              <span className="font-label-sm text-xs text-on-surface-variant group-hover:text-on-surface transition-colors text-center font-medium">
-                {skill.name}
-              </span>
-            </div>
+        {/* 32-Tile Responsive Grid (Exact 4 rows of 8 on lg:grid-cols-8) */}
+        <div className="w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-y-8 gap-x-3 justify-items-center pt-4">
+          {filteredSkills.map((skill) => (
+            <SkillCard key={skill.id} skill={skill} />
           ))}
         </div>
       </div>
