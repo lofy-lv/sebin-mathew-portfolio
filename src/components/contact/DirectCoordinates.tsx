@@ -25,38 +25,33 @@ export function DirectCoordinates() {
       </div>
 
       <div className="flex flex-col gap-3.5">
-        {/* Email Item with Copy Button */}
-        <div className="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high border border-outline-variant/20 transition-all group">
-          <div className="flex items-center gap-3.5 min-w-0">
-            <div className="p-2.5 rounded-lg bg-primary/20 text-primary group-hover:scale-110 transition-transform">
-              <Icons.Mail size={20} />
+        {/* WhatsApp Quick-Chat (UAE Recruiter Fast Track) */}
+        <a
+          href={siteConfig.contact.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with Sebin on WhatsApp"
+          className="flex items-center justify-between p-3.5 rounded-xl bg-tertiary/10 hover:bg-tertiary/15 border border-tertiary/30 transition-all group shadow-sm hover:scale-[1.01]"
+        >
+          <div className="flex items-center gap-3.5">
+            <div className="p-2.5 rounded-lg bg-tertiary/20 text-tertiary group-hover:scale-110 transition-transform">
+              <Icons.WhatsApp size={20} />
             </div>
-            <div className="flex flex-col min-w-0">
-              <span className="font-label-sm text-label-sm text-on-surface-variant">
-                Direct Inbox
+            <div className="flex flex-col">
+              <span className="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+                WhatsApp Quick-Chat
+                <span className="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
               </span>
-              <a
-                href={`mailto:${siteConfig.contact.email}`}
-                className="font-body-md text-body-md text-on-surface hover:text-primary font-medium truncate"
-              >
-                {siteConfig.contact.email}
-              </a>
+              <span className="font-body-md text-body-md text-on-surface font-medium">
+                {siteConfig.contact.phone}
+              </span>
             </div>
           </div>
-          <button
-            onClick={handleCopyEmail}
-            className="p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center shrink-0"
-            title="Copy email to clipboard"
-          >
-            {copied ? (
-              <span className="flex items-center gap-1 text-tertiary font-label-sm text-xs font-semibold">
-                <Icons.Check size={16} /> Copied!
-              </span>
-            ) : (
-              <Icons.Copy size={16} />
-            )}
-          </button>
-        </div>
+          <span className="px-3 py-1 rounded-lg bg-tertiary/20 text-tertiary font-label-sm text-xs font-semibold group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+            <span>Chat</span>
+            <Icons.ArrowRight size={13} />
+          </span>
+        </a>
 
         {/* UAE Phone Line */}
         <a
@@ -81,16 +76,51 @@ export function DirectCoordinates() {
           </span>
         </a>
 
-        {/* LinkedIn */}
+        {/* Email Item with Copy Button */}
+        <div className="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high border border-outline-variant/20 transition-all group">
+          <div className="flex items-center gap-3.5 min-w-0">
+            <div className="p-2.5 rounded-lg bg-primary/20 text-primary group-hover:scale-110 transition-transform">
+              <Icons.Mail size={20} />
+            </div>
+            <div className="flex flex-col min-w-0">
+              <span className="font-label-sm text-label-sm text-on-surface-variant">
+                Direct Inbox
+              </span>
+              <a
+                href={`mailto:${siteConfig.contact.email}`}
+                className="font-body-md text-body-md text-on-surface hover:text-primary font-medium truncate"
+              >
+                {siteConfig.contact.email}
+              </a>
+            </div>
+          </div>
+          <button
+            onClick={handleCopyEmail}
+            className="p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center shrink-0"
+            title="Copy email to clipboard"
+            aria-label="Copy email address"
+          >
+            {copied ? (
+              <span className="flex items-center gap-1 text-tertiary font-label-sm text-xs font-semibold">
+                <Icons.Check size={16} /> Copied!
+              </span>
+            ) : (
+              <Icons.Copy size={16} />
+            )}
+          </button>
+        </div>
+
+        {/* LinkedIn Profile */}
         <a
-          href={siteConfig.contact.linkedin}
+          href={siteConfig.contact.linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Sebin Mathew LinkedIn Profile"
           className="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high border border-outline-variant/20 transition-all group"
         >
           <div className="flex items-center gap-3.5 min-w-0">
             <div className="p-2.5 rounded-lg bg-secondary/20 text-secondary group-hover:scale-110 transition-transform">
-              <Icons.Share2 size={20} />
+              <Icons.LinkedIn size={20} />
             </div>
             <div className="flex flex-col min-w-0">
               <span className="font-label-sm text-label-sm text-on-surface-variant">
@@ -102,6 +132,30 @@ export function DirectCoordinates() {
             </div>
           </div>
           <Icons.ExternalLink size={16} className="text-outline group-hover:text-secondary shrink-0 mr-2" />
+        </a>
+
+        {/* GitHub Profile */}
+        <a
+          href={siteConfig.contact.githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sebin Mathew GitHub Profile"
+          className="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-high/60 hover:bg-surface-container-high border border-outline-variant/20 transition-all group"
+        >
+          <div className="flex items-center gap-3.5 min-w-0">
+            <div className="p-2.5 rounded-lg bg-surface-container-highest text-on-surface group-hover:scale-110 transition-transform">
+              <Icons.GitHub size={20} />
+            </div>
+            <div className="flex flex-col min-w-0">
+              <span className="font-label-sm text-label-sm text-on-surface-variant">
+                GitHub Repository
+              </span>
+              <span className="font-body-md text-body-md text-on-surface font-medium truncate">
+                {siteConfig.contact.githubDisplay}
+              </span>
+            </div>
+          </div>
+          <Icons.ExternalLink size={16} className="text-outline group-hover:text-primary shrink-0 mr-2" />
         </a>
 
         {/* Dubai Physical Base */}

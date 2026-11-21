@@ -19,7 +19,7 @@ export function Footer() {
               </span>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-sm">
-              Technical Project Manager & Business Analyst delivering 34+ web, SaaS, and AI products across fintech, logistics, and enterprise ecosystems.
+              Technical Project Manager & Business Analyst delivering 33+ web, SaaS, and AI products across fintech, logistics, and enterprise ecosystems.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Dubai Coordinates */}
+          {/* Dubai Coordinates & Social Proof */}
           <div className="md:col-span-4 flex flex-col gap-space-sm">
             <span className="font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">
               Dubai Contact Coordinates
@@ -64,27 +64,59 @@ export function Footer() {
                 </a>
               </div>
               <div className="flex items-center gap-2">
+                <Icons.WhatsApp className="text-tertiary text-base" size={16} />
+                <a
+                  href={siteConfig.contact.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-tertiary transition-colors"
+                  aria-label="Chat with Sebin on WhatsApp"
+                >
+                  WhatsApp Quick-Chat
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
                 <Icons.Mail className="text-tertiary text-base" size={16} />
                 <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-on-surface transition-colors">
                   {siteConfig.contact.email}
                 </a>
               </div>
+
+              {/* Social links (GitHub, LinkedIn, Portfolio) */}
               <div className="flex items-center gap-space-sm pt-2">
                 <a
-                  href={siteConfig.contact.linkedin}
+                  href={siteConfig.contact.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn Profile"
-                  className="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors"
+                  aria-label="Sebin Mathew GitHub Profile"
+                  className="p-2.5 rounded-lg bg-surface-container text-[#A1A1AA] hover:text-[#F8FAFC] hover:bg-surface-container-high transition-colors"
                 >
-                  <Icons.Share2 size={16} />
+                  <Icons.GitHub size={17} />
+                </a>
+                <a
+                  href={siteConfig.contact.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Sebin Mathew LinkedIn Profile"
+                  className="p-2.5 rounded-lg bg-surface-container text-[#A1A1AA] hover:text-[#F8FAFC] hover:bg-surface-container-high transition-colors"
+                >
+                  <Icons.LinkedIn size={17} />
+                </a>
+                <a
+                  href={siteConfig.contact.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat with Sebin on WhatsApp"
+                  className="p-2.5 rounded-lg bg-surface-container text-[#A1A1AA] hover:text-tertiary hover:bg-surface-container-high transition-colors"
+                >
+                  <Icons.WhatsApp size={17} />
                 </a>
                 <a
                   href="/projects"
-                  aria-label="View Projects"
-                  className="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors"
+                  aria-label="View Projects Directory"
+                  className="p-2.5 rounded-lg bg-surface-container text-[#A1A1AA] hover:text-primary hover:bg-surface-container-high transition-colors"
                 >
-                  <Icons.Briefcase size={16} />
+                  <Icons.Briefcase size={17} />
                 </a>
               </div>
             </div>

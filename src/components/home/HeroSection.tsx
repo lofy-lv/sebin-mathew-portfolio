@@ -44,7 +44,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          {/* Action Button Row */}
+          {/* Action Button Row with WhatsApp Quick-Chat */}
           <div className="flex flex-wrap items-center gap-space-sm pt-2">
             <Link
               href="/contact"
@@ -53,6 +53,18 @@ export function HeroSection() {
               <span>Contact Me</span>
               <Icons.ArrowRight size={18} />
             </Link>
+
+            {/* WhatsApp Me (UAE Recruiter Quick-Chat) */}
+            <a
+              href={siteConfig.contact.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat with Sebin on WhatsApp"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-tertiary/10 hover:bg-tertiary/20 text-tertiary border border-tertiary/30 font-label-md text-label-md font-semibold shadow-[0_0_20px_-5px_rgba(45,212,191,0.25)] hover:scale-[1.02] active:scale-95 transition-all"
+            >
+              <Icons.WhatsApp size={18} />
+              <span>WhatsApp Me</span>
+            </a>
 
             <a
               href={siteConfig.contact.phoneHref}

@@ -89,9 +89,15 @@ export function FeaturedProjects() {
                   {proj.title}
                 </h3>
 
-                <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4 line-clamp-3">
+                <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-3 line-clamp-3">
                   {proj.description}
                 </p>
+
+                {/* Role Attribution Badge */}
+                <div className="mb-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high/80 border border-outline-variant/30 text-[11px] font-label-sm font-medium text-on-surface-variant w-fit">
+                  <span className="text-tertiary font-semibold">Role:</span>
+                  <span className="text-on-surface">{proj.role || "Technical PM @ Esight"}</span>
+                </div>
 
                 <div className="mt-auto flex flex-wrap gap-1.5 pt-2 border-t border-outline-variant/40">
                   {proj.tags.map((tag, i) => (

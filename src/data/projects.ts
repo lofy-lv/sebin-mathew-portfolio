@@ -1,6 +1,7 @@
 import { Project } from "@/types";
+import { projectsListSchema } from "@/lib/validation";
 
-export const projectsData: Project[] = [
+const rawProjects: Project[] = [
   {
     id: "virtune-realtors",
     title: "Virtune Realtors - Property Panel",
@@ -13,7 +14,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "AI Matching", "CRM", "REST APIs"],
     metric: "60%+ compatibility matching workflow",
     metrics: "60%+ compatibility matching workflow",
-    image: "/projects/virtune-realtors.webp"
+    image: "/projects/virtune-realtors.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "connective-india",
@@ -27,7 +30,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Node.js", "RBAC", "Admin Portal"],
     metric: "Multi-role enterprise workflow",
     metrics: "Multi-role enterprise workflow",
-    image: "/projects/connective-india.webp"
+    image: "/projects/connective-india.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "manwish",
@@ -41,7 +46,9 @@ export const projectsData: Project[] = [
     tags: ["MERN Stack", "Multi-Tenant", "RBAC", "Payments"],
     metric: "Automated partner commission engine",
     metrics: "Automated partner commission engine",
-    image: "/projects/manwish.webp"
+    image: "/projects/manwish.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "creative-stitching",
@@ -55,7 +62,9 @@ export const projectsData: Project[] = [
     tags: ["Flutter", "LMS", "Video Streaming", "Payments"],
     metric: "End-to-end mobile learning platform",
     metrics: "End-to-end mobile learning platform",
-    image: "/projects/creative-stitching.webp"
+    image: "/projects/creative-stitching.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "millijobs",
@@ -69,7 +78,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Express", "MongoDB", "Search Optimization"],
     metric: "High-throughput recruitment engine",
     metrics: "High-throughput recruitment engine",
-    image: "/projects/millijobs.webp"
+    image: "/projects/millijobs.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "neethus-study-abroad",
@@ -83,7 +94,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "Node.js", "EdTech", "Cloudflare"],
     metric: "Zero-downtime exam portal scaling",
     metrics: "Zero-downtime exam portal scaling",
-    image: "/projects/neethus-study-abroad.webp"
+    image: "/projects/neethus-study-abroad.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "tribe-salon",
@@ -97,7 +110,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "Tailwind CSS", "Booking API"],
     metric: "Streamlined online salon bookings",
     metrics: "Streamlined online salon bookings",
-    image: "/projects/tribe-salon.webp"
+    image: "/projects/tribe-salon.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "aura-airport-hotel",
@@ -111,7 +126,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "Booking Engine", "SEO"],
     metric: "Direct room reservation funnel",
     metrics: "Direct room reservation funnel",
-    image: "/projects/aura-airport-hotel.webp"
+    image: "/projects/aura-airport-hotel.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "drk-aesthetics",
@@ -125,7 +142,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Tailwind CSS", "Lead Capture"],
     metric: "High-converting consultation flow",
     metrics: "High-converting consultation flow",
-    image: "/projects/drk-aesthetics.webp"
+    image: "/projects/drk-aesthetics.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "gaspet-world",
@@ -139,7 +158,9 @@ export const projectsData: Project[] = [
     tags: ["MERN Stack", "REST APIs", "Catalog"],
     metric: "Centralized B2B product discovery",
     metrics: "Centralized B2B product discovery",
-    image: "/projects/gaspet-world.webp"
+    image: "/projects/gaspet-world.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "harman-motors",
@@ -153,7 +174,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "Tailwind CSS", "Lead Gen"],
     metric: "Automated dealer lead routing",
     metrics: "Automated dealer lead routing",
-    image: "/projects/harman-motors.webp"
+    image: "/projects/harman-motors.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "signature-hardwares",
@@ -167,7 +190,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Node.js", "Product Catalog"],
     metric: "Digital B2B quotation workflow",
     metrics: "Digital B2B quotation workflow",
-    image: "/projects/signature-hardwares.webp"
+    image: "/projects/signature-hardwares.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "comorin-solar",
@@ -181,7 +206,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Express", "Calculator UI"],
     metric: "Interactive rooftop solar estimator",
     metrics: "Interactive rooftop solar estimator",
-    image: "/projects/comorin-solar.webp"
+    image: "/projects/comorin-solar.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "vedapuri-ayurveda",
@@ -195,7 +222,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "Tailwind CSS", "Healthcare"],
     metric: "Global patient inquiry portal",
     metrics: "Global patient inquiry portal",
-    image: "/projects/vedapuri-ayurveda.webp"
+    image: "/projects/vedapuri-ayurveda.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "southern-foods-global",
@@ -209,7 +238,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Tailwind CSS", "B2B Export"],
     metric: "International distributor catalog",
     metrics: "International distributor catalog",
-    image: "/projects/southern-foods-global.webp"
+    image: "/projects/southern-foods-global.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "imt-law-college",
@@ -223,7 +254,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "Admissions Portal", "CMS"],
     metric: "Streamlined student admissions",
     metrics: "Streamlined student admissions",
-    image: "/projects/imt-law-college.webp"
+    image: "/projects/imt-law-college.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "universal-mobiles",
@@ -237,7 +270,9 @@ export const projectsData: Project[] = [
     tags: ["MERN Stack", "E-Commerce", "REST APIs"],
     metric: "Full online retail storefront",
     metrics: "Full online retail storefront",
-    image: "/projects/universal-mobiles.webp"
+    image: "/projects/universal-mobiles.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "christs-grace",
@@ -251,7 +286,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Tailwind CSS", "CMS"],
     metric: "Centralized community hub",
     metrics: "Centralized community hub",
-    image: "/projects/christs-grace.webp"
+    image: "/projects/christs-grace.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "glass-tech-components",
@@ -265,7 +302,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "B2B Catalog", "Tailwind CSS"],
     metric: "Technical spec & trade portal",
     metrics: "Technical spec & trade portal",
-    image: "/projects/glass-tech-components.webp"
+    image: "/projects/glass-tech-components.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "sunlane",
@@ -279,7 +318,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "SEO", "Tailwind CSS"],
     metric: "High-speed corporate web presence",
     metrics: "High-speed corporate web presence",
-    image: "/projects/sunlane.webp"
+    image: "/projects/sunlane.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "sunfocuz",
@@ -293,7 +334,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Tailwind CSS", "Lead Capture"],
     metric: "End-to-end solar lead funnel",
     metrics: "End-to-end solar lead funnel",
-    image: "/projects/sunfocuz.webp"
+    image: "/projects/sunfocuz.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "raya-group",
@@ -307,7 +350,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "Corporate Portal", "Tailwind CSS"],
     metric: "Unified multi-business digital hub",
     metrics: "Unified multi-business digital hub",
-    image: "/projects/raya-group.webp"
+    image: "/projects/raya-group.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "deneha",
@@ -321,7 +366,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Tailwind CSS", "UI/UX"],
     metric: "Responsive brand storefront",
     metrics: "Responsive brand storefront",
-    image: "/projects/deneha.webp"
+    image: "/projects/deneha.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "sangwin",
@@ -335,7 +382,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "Tailwind CSS", "Cloudflare"],
     metric: "Fast, secure corporate deployment",
     metrics: "Fast, secure corporate deployment",
-    image: "/projects/sangwin.webp"
+    image: "/projects/sangwin.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "lakeside-marathon",
@@ -349,7 +398,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Node.js", "Event Registration"],
     metric: "Seamless participant onboarding",
     metrics: "Seamless participant onboarding",
-    image: "/projects/lakeside-marathon.webp"
+    image: "/projects/lakeside-marathon.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "try-bgmi",
@@ -363,7 +414,9 @@ export const projectsData: Project[] = [
     tags: ["MERN Stack", "Gaming Portal", "REST APIs"],
     metric: "Scalable tournament registration",
     metrics: "Scalable tournament registration",
-    image: "/projects/try-bgmi.webp"
+    image: "/projects/try-bgmi.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "tisobu",
@@ -377,7 +430,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Express", "MongoDB"],
     metric: "Structured local business discovery",
     metrics: "Structured local business discovery",
-    image: "/projects/tisobu.webp"
+    image: "/projects/tisobu.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "jyothi-nivas-aluva",
@@ -391,7 +446,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "CMS", "Tailwind CSS"],
     metric: "Accessible institutional portal",
     metrics: "Accessible institutional portal",
-    image: "/projects/jyothi-nivas-aluva.webp"
+    image: "/projects/jyothi-nivas-aluva.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "bussus",
@@ -405,7 +462,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Node.js", "REST APIs"],
     metric: "Simplified transit & route lookup",
     metrics: "Simplified transit & route lookup",
-    image: "/projects/bussus.webp"
+    image: "/projects/bussus.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "flygon",
@@ -419,7 +478,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "REST APIs", "Tailwind CSS"],
     metric: "High-conversion travel inquiry flow",
     metrics: "High-conversion travel inquiry flow",
-    image: "/projects/flygon.webp"
+    image: "/projects/flygon.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "live-education-consultancy",
@@ -433,7 +494,9 @@ export const projectsData: Project[] = [
     tags: ["React", "Lead Capture", "EdTech"],
     metric: "Streamlined student counseling funnel",
     metrics: "Streamlined student counseling funnel",
-    image: "/projects/live-education-consultancy.webp"
+    image: "/projects/live-education-consultancy.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "tecqx",
@@ -447,7 +510,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "Tailwind CSS", "B2B Tech"],
     metric: "Modern IT consultancy showcase",
     metrics: "Modern IT consultancy showcase",
-    image: "/projects/tecqx.webp"
+    image: "/projects/tecqx.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   },
   {
     id: "missionari-dei-sacri-cuori",
@@ -461,9 +526,14 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "CMS", "Multilingual"],
     metric: "Global organizational web portal",
     metrics: "Global organizational web portal",
-    image: "/projects/missionari-dei-sacri-cuori.webp"
+    image: "/projects/missionari-dei-sacri-cuori.webp",
+    role: "Technical PM @ Esight",
+    organization: "Esight Business Solutions"
   }
 ];
+
+// Validate all projects at build/load time with Zod
+export const projectsData: Project[] = projectsListSchema.parse(rawProjects);
 
 export const projectCategories = [
   { id: "all", label: "All Projects" },

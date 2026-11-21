@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sebinmathew.com"),
   title: "Sebin Mathew | Technical Project Manager & Business Analyst",
   description:
     "Portfolio of Sebin Mathew - Technical Project Manager & Business Analyst in Dubai, UAE. Shipped 34+ web, SaaS, and mobile products across fintech, logistics, and enterprise ecosystems.",
@@ -23,8 +24,16 @@ export const metadata: Metadata = {
     title: "Sebin Mathew | Technical Project Manager & Business Analyst",
     description:
       "Turning ideas into products people actually use. 34+ commercial products shipped.",
-    type: "website",
+    url: "https://sebinmathew.com",
+    siteName: "Sebin Mathew Portfolio",
     locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sebin Mathew | Technical Project Manager & Business Analyst",
+    description:
+      "Turning ideas into products people actually use. 34+ commercial products shipped.",
   },
 };
 

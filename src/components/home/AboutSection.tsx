@@ -47,6 +47,45 @@ export function AboutSection() {
               </span>
             ))}
           </div>
+
+          {/* Social Proof Strip */}
+          <div className="p-4 rounded-2xl bg-surface-container border border-outline-variant/30 flex items-center justify-between">
+            <span className="font-label-sm text-label-sm text-on-surface-variant font-medium">
+              Verified Profiles
+            </span>
+            <div className="flex items-center gap-2">
+              <a
+                href={siteConfig.contact.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Sebin Mathew GitHub Profile"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high text-[#A1A1AA] hover:text-[#F8FAFC] transition-colors font-label-sm text-xs font-semibold"
+              >
+                <Icons.GitHub size={14} />
+                <span>GitHub</span>
+              </a>
+              <a
+                href={siteConfig.contact.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Sebin Mathew LinkedIn Profile"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high text-[#A1A1AA] hover:text-[#F8FAFC] transition-colors font-label-sm text-xs font-semibold"
+              >
+                <Icons.LinkedIn size={14} />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href={siteConfig.contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Sebin on WhatsApp"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-tertiary/10 text-tertiary hover:bg-tertiary/20 transition-colors font-label-sm text-xs font-semibold border border-tertiary/20"
+              >
+                <Icons.WhatsApp size={14} />
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Right Column: Narrative & Experience Roadmap */}

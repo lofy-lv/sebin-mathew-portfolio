@@ -23,6 +23,8 @@ export interface Project {
   metric?: string;
   metrics?: string;
   image: string;
+  role: string;
+  organization: string;
 }
 
 export type SkillCategory = "all" | "agile" | "code" | "ai" | "devops";
@@ -54,4 +56,6 @@ export interface CaseStudy {
   summary: string;
   impactMetrics: { label: string; value: string }[];
   colorVariant: "primary" | "secondary" | "tertiary";
+  role?: string;
+  organization?: string;
 }
