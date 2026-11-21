@@ -1,25 +1,28 @@
 export type ProjectCategory =
   | "all"
-  | "web-platform"
-  | "saas"
-  | "mobile-app"
-  | "ai-automation"
-  | "business-websites";
+  | "Web Platform"
+  | "SaaS"
+  | "Mobile App"
+  | "AI & Automation"
+  | "Business Websites"
+  | string;
 
-export type ProjectStatus = "shipped" | "ongoing" | "planning";
+export type ProjectStatus = "Shipped" | "Ongoing" | "Planning" | "shipped" | "ongoing" | "planning" | string;
 
 export interface Project {
   id: string;
   title: string;
-  category: ProjectCategory;
-  categoryLabel: string;
-  status: ProjectStatus;
+  domain: string;
+  liveUrl?: string;
+  category: string;
+  categoryLabel?: string;
+  status: string;
+  featured?: boolean;
   description: string;
   tags: string[];
-  image: string;
-  liveUrl?: string;
+  metric?: string;
   metrics?: string;
-  featured?: boolean;
+  image: string;
 }
 
 export type SkillCategory = "all" | "agile" | "code" | "ai" | "devops";

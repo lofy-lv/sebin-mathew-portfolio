@@ -4,7 +4,7 @@ import { Icons } from "@/components/ui/Icons";
 export function ImpactStrip() {
   const stats = [
     {
-      value: "34+",
+      value: "33+",
       title: "Live Projects",
       subtitle: "Web, SaaS & Mobile Deployments",
       icon: Icons.Rocket,

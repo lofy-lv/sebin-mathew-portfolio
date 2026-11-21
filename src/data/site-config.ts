@@ -35,10 +35,10 @@ export const siteConfig = {
     "Hosting & DevOps Coordination",
   ],
   stats: {
-    totalProjects: 34,
-    shipped: 28,
-    ongoing: 4,
-    planning: 2,
+    totalProjects: 33,
+    shipped: 33,
+    ongoing: 0,
+    planning: 0,
     csat: "100%",
   },
 };
