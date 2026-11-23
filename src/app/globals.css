@@ -96,4 +96,56 @@
     border-color: rgba(139, 92, 246, 0.5);
     box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.25);
   }
+
+  @keyframes float-gentle-1 {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  @keyframes float-gentle-2 {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+  }
+
+  @keyframes float-gentle-3 {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes float-gentle-4 {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(6px);
+    }
+  }
+
+  .animate-float-1 {
+    animation: float-gentle-1 4s ease-in-out infinite;
+  }
+
+  .animate-float-2 {
+    animation: float-gentle-2 5s ease-in-out infinite 0.5s;
+  }
+
+  .animate-float-3 {
+    animation: float-gentle-3 4.5s ease-in-out infinite 1s;
+  }
+
+  .animate-float-4 {
+    animation: float-gentle-4 5.5s ease-in-out infinite 1.5s;
+  }
 }

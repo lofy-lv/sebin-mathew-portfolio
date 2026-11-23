@@ -45,13 +45,13 @@ export function HeroSection() {
           </div>
 
           {/* Action Button Row with WhatsApp Quick-Chat */}
-          <div className="flex flex-wrap items-center gap-space-sm pt-2">
+          <div className="w-full grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:w-auto sm:items-center sm:gap-3 pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary text-on-primary font-headline-sm text-label-md font-semibold shadow-glow-amber hover:brightness-110 active:scale-95 transition-all"
+              className="h-11 sm:h-12 px-3 sm:px-6 rounded-xl bg-gradient-to-r from-primary-container to-secondary text-on-primary font-headline-sm text-label-sm sm:text-label-md font-semibold shadow-glow-amber hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-1.5 sm:gap-2"
             >
               <span>Contact Me</span>
-              <Icons.ArrowRight size={18} />
+              <Icons.ArrowRight size={16} className="shrink-0" />
             </Link>
 
             {/* WhatsApp Me (UAE Recruiter Quick-Chat) */}
@@ -60,26 +60,26 @@ export function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat with Sebin on WhatsApp"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-tertiary/10 hover:bg-tertiary/20 text-tertiary border border-tertiary/30 font-label-md text-label-md font-semibold shadow-[0_0_20px_-5px_rgba(45,212,191,0.25)] hover:scale-[1.02] active:scale-95 transition-all"
+              className="h-11 sm:h-12 px-3 sm:px-5 rounded-xl bg-tertiary/10 hover:bg-tertiary/20 text-tertiary border border-tertiary/30 font-label-md text-label-sm sm:text-label-md font-semibold shadow-[0_0_20px_-5px_rgba(45,212,191,0.25)] hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-1.5 sm:gap-2"
             >
-              <Icons.WhatsApp size={18} />
+              <Icons.WhatsApp size={16} className="shrink-0" />
               <span>WhatsApp Me</span>
             </a>
 
             <a
               href={siteConfig.contact.phoneHref}
-              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface-container/70 backdrop-blur-md text-on-surface font-label-md font-medium hover:bg-surface-container-high transition-colors border border-outline-variant/30"
+              className="h-11 sm:h-12 px-3 sm:px-5 rounded-xl bg-surface-container-high/80 hover:bg-surface-container-highest border border-outline-variant/30 text-on-surface font-label-md text-label-sm sm:text-label-md font-medium hover:border-tertiary/40 active:scale-95 transition-all flex items-center justify-center gap-1.5 sm:gap-2"
             >
-              <Icons.Phone size={18} className="text-tertiary" />
+              <Icons.Phone size={16} className="text-tertiary shrink-0" />
               <span>Call Me</span>
             </a>
 
             <a
               href={siteConfig.contact.cvPath}
               download
-              className="inline-flex items-center justify-center gap-2 px-4 py-3.5 text-on-surface-variant hover:text-primary font-label-md font-medium transition-colors"
+              className="h-11 sm:h-12 px-3 sm:px-5 rounded-xl bg-surface-container-high/80 hover:bg-surface-container-highest border border-outline-variant/30 text-on-surface font-label-md text-label-sm sm:text-label-md font-medium hover:text-primary hover:border-primary/40 active:scale-95 transition-all flex items-center justify-center gap-1.5 sm:gap-2"
             >
-              <Icons.Download size={18} />
+              <Icons.Download size={16} className="shrink-0" />
               <span>Download CV</span>
             </a>
           </div>
@@ -94,7 +94,7 @@ export function HeroSection() {
             <div className="absolute w-60 h-60 rounded-full bg-secondary/20 blur-[80px] -bottom-4 -right-4 pointer-events-none"></div>
 
             {/* Central Portrait Frame */}
-            <div className="relative w-68 sm:w-80 lg:w-[340px] xl:w-[380px] aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high shadow-2xl ring-1 ring-outline-variant/30">
+            <div className="relative w-[280px] sm:w-[320px] md:w-[340px] lg:w-[350px] xl:w-[380px] aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high shadow-2xl ring-1 ring-outline-variant/30">
               <Image
                 src={siteConfig.contact.portraitPath}
                 alt={siteConfig.name}
@@ -108,31 +108,34 @@ export function HeroSection() {
 
             {/* Floating Glass Card 1: PRD (Top-Left) */}
             <div
-              className="absolute -top-3 -left-2 sm:-left-4 z-20 flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50 animate-bounce"
-              style={{ animationDuration: "4s" }}
+              className="absolute -top-3 -left-2 sm:-left-5 z-20 flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-2xl bg-surface-container-high/95 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50 animate-float-1 hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
             >
-              <div className="p-1.5 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
+              <div className="p-1.5 rounded-lg bg-primary/20 text-primary flex items-center justify-center shrink-0">
                 <Icons.FileText size={16} />
               </div>
               <div className="flex flex-col">
-                <span className="font-headline-sm text-label-md font-bold text-on-surface">PRD</span>
-                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant">Specs & Scopes</span>
+                <span className="font-headline-sm text-xs sm:text-label-md font-bold text-on-surface">PRD</span>
+                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">Specs & Scopes</span>
               </div>
             </div>
 
-            {/* Floating Glass Card 2: Agile (Middle-Right) */}
-            <div className="absolute top-1/4 -right-2 sm:-right-4 z-20 flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
-              <div className="p-1.5 rounded-lg bg-tertiary/20 text-tertiary flex items-center justify-center">
+            {/* Floating Glass Card 2: Agile (Upper-Right) */}
+            <div
+              className="absolute top-12 sm:top-16 -right-2 sm:-right-5 z-20 flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-2xl bg-surface-container-high/95 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50 animate-float-2 hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
+            >
+              <div className="p-1.5 rounded-lg bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
                 <Icons.RefreshCw size={16} />
               </div>
               <div className="flex flex-col">
-                <span className="font-headline-sm text-label-md font-bold text-on-surface">Agile</span>
-                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant">2-Wk Sprints</span>
+                <span className="font-headline-sm text-xs sm:text-label-md font-bold text-on-surface">Agile</span>
+                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">2-Wk Sprints</span>
               </div>
             </div>
 
             {/* Floating Glass Card 3: Sebin Mathew Identity Badge (Bottom-Left) */}
-            <div className="absolute -bottom-4 -left-2 sm:-left-4 z-20 flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
+            <div
+              className="absolute -bottom-3 -left-2 sm:-left-5 z-20 flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-2xl bg-surface-container-high/95 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50 animate-float-3 hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
+            >
               <div className="p-1.5 rounded-xl bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
                 <Icons.ShieldCheck size={18} />
               </div>
@@ -146,8 +149,10 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Floating Glass Card 4: AI-Ready (Bottom-Right) */}
-            <div className="absolute -bottom-4 -right-2 sm:-right-4 z-20 flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
+            {/* Floating Glass Card 4: AI-Ready (Lower-Right) */}
+            <div
+              className="absolute bottom-12 sm:bottom-16 -right-2 sm:-right-5 z-20 flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-2xl bg-surface-container-high/95 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50 animate-float-4 hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
+            >
               <div className="p-1.5 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
                 <Icons.Sparkles size={16} />
               </div>
