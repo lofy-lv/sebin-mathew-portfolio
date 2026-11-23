@@ -7,10 +7,10 @@ import { GlowOrb } from "@/components/ui/GlowOrb";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full overflow-visible py-16 lg:py-24">
+    <section className="relative w-full overflow-x-clip py-16 lg:py-24">
       {/* Ambient atmospheric glows */}
       <GlowOrb color="primary" size="lg" className="-top-32 -left-20" />
-      <GlowOrb color="secondary" size="xl" className="top-1/3 -right-24" />
+      <GlowOrb color="secondary" size="xl" className="top-1/3 right-0" />
 
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center relative z-10">
         {/* Left Column (Hero Content) */}
@@ -86,72 +86,75 @@ export function HeroSection() {
         </div>
 
         {/* Right Column (Portrait & Floating Badges) */}
-        <div className="lg:col-span-5 relative flex items-center justify-center mt-12 lg:mt-0 overflow-visible py-6">
-          {/* Subtle Glows behind portrait */}
-          <div className="absolute w-72 h-72 rounded-full bg-primary/25 blur-[90px] -top-6 -left-6 pointer-events-none"></div>
-          <div className="absolute w-64 h-64 rounded-full bg-secondary/20 blur-[90px] -bottom-6 -right-6 pointer-events-none"></div>
+        <div className="lg:col-span-5 relative flex items-center justify-center mt-12 lg:mt-0 py-8">
+          {/* Portrait Container with Relative Anchor for Floating Badges */}
+          <div className="relative">
+            {/* Subtle Glows behind portrait (contained within portrait anchor) */}
+            <div className="absolute w-64 h-64 rounded-full bg-primary/20 blur-[80px] -top-4 -left-4 pointer-events-none"></div>
+            <div className="absolute w-60 h-60 rounded-full bg-secondary/20 blur-[80px] -bottom-4 -right-4 pointer-events-none"></div>
 
-          {/* Central Portrait Frame */}
-          <div className="relative w-72 sm:w-80 lg:w-[360px] xl:w-[400px] aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high shadow-2xl ring-1 ring-outline-variant/30">
-            <Image
-              src={siteConfig.contact.portraitPath}
-              alt={siteConfig.name}
-              fill
-              sizes="(max-width: 768px) 320px, 420px"
-              className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-50"></div>
-          </div>
+            {/* Central Portrait Frame */}
+            <div className="relative w-68 sm:w-80 lg:w-[340px] xl:w-[380px] aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high shadow-2xl ring-1 ring-outline-variant/30">
+              <Image
+                src={siteConfig.contact.portraitPath}
+                alt={siteConfig.name}
+                fill
+                sizes="(max-width: 768px) 320px, 400px"
+                className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-50"></div>
+            </div>
 
-          {/* Floating Glass Card 1: PRD (Top-Left) */}
-          <div
-            className="absolute -top-4 -left-3 sm:-left-6 lg:-left-8 z-20 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50 animate-bounce"
-            style={{ animationDuration: "4s" }}
-          >
-            <div className="p-2 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
-              <Icons.FileText size={18} />
+            {/* Floating Glass Card 1: PRD (Top-Left) */}
+            <div
+              className="absolute -top-3 -left-2 sm:-left-4 z-20 flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50 animate-bounce"
+              style={{ animationDuration: "4s" }}
+            >
+              <div className="p-1.5 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
+                <Icons.FileText size={16} />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-headline-sm text-label-md font-bold text-on-surface">PRD</span>
+                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant">Specs & Scopes</span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="font-headline-sm text-label-md font-bold text-on-surface">PRD</span>
-              <span className="font-label-sm text-label-sm text-on-surface-variant">Specs & Scopes</span>
-            </div>
-          </div>
 
-          {/* Floating Glass Card 2: Agile (Middle-Right) */}
-          <div className="absolute top-1/3 -right-3 sm:-right-6 lg:-right-8 z-20 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
-            <div className="p-2 rounded-lg bg-tertiary/20 text-tertiary flex items-center justify-center">
-              <Icons.RefreshCw size={18} />
+            {/* Floating Glass Card 2: Agile (Middle-Right) */}
+            <div className="absolute top-1/4 -right-2 sm:-right-4 z-20 flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
+              <div className="p-1.5 rounded-lg bg-tertiary/20 text-tertiary flex items-center justify-center">
+                <Icons.RefreshCw size={16} />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-headline-sm text-label-md font-bold text-on-surface">Agile</span>
+                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant">2-Wk Sprints</span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="font-headline-sm text-label-md font-bold text-on-surface">Agile</span>
-              <span className="font-label-sm text-label-sm text-on-surface-variant">2-Wk Sprints</span>
-            </div>
-          </div>
 
-          {/* Floating Glass Card 3: Sebin Mathew Identity Badge (Bottom-Left) */}
-          <div className="absolute -bottom-5 -left-3 sm:-left-6 lg:-left-8 z-20 flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
-            <div className="p-2 rounded-xl bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
-              <Icons.ShieldCheck size={20} />
+            {/* Floating Glass Card 3: Sebin Mathew Identity Badge (Bottom-Left) */}
+            <div className="absolute -bottom-4 -left-2 sm:-left-4 z-20 flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
+              <div className="p-1.5 rounded-xl bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
+                <Icons.ShieldCheck size={18} />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-label-md text-xs sm:text-label-md font-bold text-on-surface whitespace-nowrap">
+                  {siteConfig.name}
+                </span>
+                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">
+                  {siteConfig.certifications}
+                </span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="font-label-md text-label-md font-bold text-on-surface whitespace-nowrap">
-                {siteConfig.name}
-              </span>
-              <span className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">
-                {siteConfig.certifications}
-              </span>
-            </div>
-          </div>
 
-          {/* Floating Glass Card 4: AI-Ready (Bottom-Right) */}
-          <div className="absolute -bottom-5 -right-3 sm:-right-6 lg:-right-8 z-20 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
-            <div className="p-2 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
-              <Icons.Sparkles size={18} />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-headline-sm text-label-md font-bold text-on-surface whitespace-nowrap">AI-ready</span>
-              <span className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">LLM Workflows</span>
+            {/* Floating Glass Card 4: AI-Ready (Bottom-Right) */}
+            <div className="absolute -bottom-4 -right-2 sm:-right-4 z-20 flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
+              <div className="p-1.5 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
+                <Icons.Sparkles size={16} />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-headline-sm text-xs sm:text-label-md font-bold text-on-surface whitespace-nowrap">AI-ready</span>
+                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">LLM Workflows</span>
+              </div>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ export default function ContactPage() {
     <main className="w-full bg-surface min-h-[calc(100vh-80px)] relative overflow-hidden">
       {/* Ambient Atmospheric Glows */}
       <GlowOrb color="primary" size="lg" className="-top-32 -left-40" />
-      <GlowOrb color="secondary" size="lg" className="top-1/3 -right-32" />
+      <GlowOrb color="secondary" size="lg" className="top-1/3 right-0" />
       <GlowOrb color="tertiary" size="xl" className="bottom-10 left-1/4" />
 
       {/* Breadcrumb & Status Ribbon */}

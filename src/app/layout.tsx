@@ -53,7 +53,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+      <body className="bg-surface text-on-surface antialiased min-h-screen flex flex-col max-w-full overflow-x-clip">
         <Navbar />
         <div className="flex-1 pt-20">{children}</div>
         <Footer />
