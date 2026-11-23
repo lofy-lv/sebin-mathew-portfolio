@@ -106,44 +106,49 @@ export default function ProjectsPage() {
 
             {/* Quick Metrics Bento Bar (Dynamically Computed) */}
             <div className="lg:col-span-4 flex items-center justify-end">
-              <div className="w-full grid grid-cols-3 sm:grid-cols-5 gap-2 p-2.5 rounded-xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/30 shadow-lg">
-                <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container/60 text-center">
-                  <span className="font-display text-headline-sm text-primary font-bold leading-none">
-                    {totalCount}
-                  </span>
-                  <span className="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">
-                    Total
-                  </span>
+              <div className="w-full flex flex-col gap-2 p-2.5 sm:p-3 rounded-2xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/30 shadow-lg">
+                {/* 4 Stats in a Single Row */}
+                <div className="grid grid-cols-4 gap-1.5 sm:gap-2">
+                  <div className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-surface-container/60 text-center">
+                    <span className="font-display text-base sm:text-lg lg:text-xl text-primary font-bold leading-none">
+                      {totalCount}
+                    </span>
+                    <span className="font-label-sm text-[9px] sm:text-[10px] text-on-surface-variant uppercase font-semibold mt-1 tracking-wider">
+                      Total
+                    </span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-surface-container/60 text-center">
+                    <span className="font-display text-base sm:text-lg lg:text-xl text-tertiary font-bold leading-none">
+                      {shippedCount}
+                    </span>
+                    <span className="font-label-sm text-[9px] sm:text-[10px] text-on-surface-variant uppercase font-semibold mt-1 tracking-wider">
+                      Shipped
+                    </span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-surface-container/60 text-center">
+                    <span className="font-display text-base sm:text-lg lg:text-xl text-secondary font-bold leading-none">
+                      {ongoingCount}
+                    </span>
+                    <span className="font-label-sm text-[9px] sm:text-[10px] text-on-surface-variant uppercase font-semibold mt-1 tracking-wider">
+                      Ongoing
+                    </span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-surface-container/60 text-center">
+                    <span className="font-display text-base sm:text-lg lg:text-xl text-primary-fixed-dim font-bold leading-none">
+                      {planningCount}
+                    </span>
+                    <span className="font-label-sm text-[9px] sm:text-[10px] text-on-surface-variant uppercase font-semibold mt-1 tracking-wider">
+                      Planning
+                    </span>
+                  </div>
                 </div>
-                <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container/60 text-center">
-                  <span className="font-display text-headline-sm text-tertiary font-bold leading-none">
-                    {shippedCount}
-                  </span>
-                  <span className="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">
-                    Shipped
-                  </span>
-                </div>
-                <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container/60 text-center">
-                  <span className="font-display text-headline-sm text-secondary font-bold leading-none">
-                    {ongoingCount}
-                  </span>
-                  <span className="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">
-                    Ongoing
-                  </span>
-                </div>
-                <div className="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container/60 text-center">
-                  <span className="font-display text-headline-sm text-primary-fixed-dim font-bold leading-none">
-                    {planningCount}
-                  </span>
-                  <span className="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">
-                    Planning
-                  </span>
-                </div>
-                <div className="col-span-3 sm:col-span-1 flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-high/80 text-center">
-                  <span className="font-display text-headline-sm text-tertiary-fixed font-bold leading-none">
+
+                {/* 100% CSAT Banner */}
+                <div className="flex flex-col items-center justify-center py-2 px-3 rounded-xl bg-surface-container-high/80 text-center">
+                  <span className="font-display text-base sm:text-lg text-tertiary-fixed font-bold leading-none">
                     100%
                   </span>
-                  <span className="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">
+                  <span className="font-label-sm text-[10px] text-on-surface-variant uppercase font-semibold mt-1 tracking-wider">
                     CSAT
                   </span>
                 </div>
