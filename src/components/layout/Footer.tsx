@@ -30,19 +30,22 @@ export function Footer() {
             </span>
             <div className="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
               <Link href="/#about" className="hover:text-primary transition-colors">
-                About Expertise
+                About
               </Link>
               <Link href="/#skills" className="hover:text-primary transition-colors">
-                Core Competencies
+                Skills
               </Link>
               <Link href="/#process" className="hover:text-primary transition-colors">
-                Agile Framework
+                Process
               </Link>
               <Link href="/projects" className="hover:text-primary transition-colors">
-                Delivered Products
+                Projects
               </Link>
               <Link href="/#case-studies" className="hover:text-primary transition-colors">
-                In-Depth Case Studies
+                Case Studies
+              </Link>
+              <Link href="/contact" className="hover:text-primary transition-colors">
+                Contact
               </Link>
             </div>
           </div>
@@ -111,13 +114,13 @@ export function Footer() {
                 >
                   <Icons.WhatsApp size={17} />
                 </a>
-                <a
+                {/* <a
                   href="/projects"
                   aria-label="View Projects Directory"
                   className="p-2.5 rounded-lg bg-surface-container text-[#A1A1AA] hover:text-primary hover:bg-surface-container-high transition-colors"
                 >
                   <Icons.Briefcase size={17} />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -126,10 +129,10 @@ export function Footer() {
         {/* Copyright & Visa banner */}
         <div className="pt-space-md border-t border-outline-variant/15 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant">
           <p>© {new Date().getFullYear()} Sebin Mathew. All rights reserved.</p>
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span>
             <span>Residence Visa & Immediate Onboarding in UAE</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
