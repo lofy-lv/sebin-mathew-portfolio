@@ -6,8 +6,8 @@ import { Icons } from "@/components/ui/Icons";
 
 export function AboutSection() {
   return (
-    <section className="w-full py-20 px-margin-mobile lg:px-margin bg-surface-container-lowest/50" id="about">
-      <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <section className="w-full py-20 px-6 md:px-10 lg:px-14 bg-surface-container-lowest/50" id="about">
+      <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Left Column: Visual Portrait & Highlight Badges */}
         <div className="lg:col-span-5 flex flex-col gap-6">
           <div className="relative rounded-3xl overflow-hidden bg-surface-container-low border border-outline-variant/40 shadow-2xl p-2">

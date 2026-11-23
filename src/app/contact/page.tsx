@@ -15,7 +15,7 @@ export default function ContactPage() {
       <GlowOrb color="tertiary" size="xl" className="bottom-10 left-1/4" />
 
       {/* Breadcrumb & Status Ribbon */}
-      <section className="w-full max-w-[1240px] mx-auto px-margin-mobile lg:px-margin pt-6 lg:pt-10 relative z-10">
+      <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14 pt-6 lg:pt-10 relative z-10">
         <div className="flex flex-wrap items-center justify-between gap-4 py-3 px-space-md rounded-xl bg-surface-container-low border border-outline-variant/30 shadow-sm">
           {/* Breadcrumb Path */}
           <nav aria-label="Breadcrumbs" className="flex items-center gap-2">
@@ -46,7 +46,7 @@ export default function ContactPage() {
       </section>
 
       {/* Main Engagement Suite */}
-      <section className="w-full max-w-[1240px] mx-auto px-margin-mobile lg:px-margin py-8 lg:py-16 relative z-10">
+      <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14 py-8 lg:py-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
           {/* LEFT COLUMN: Value Proposition & Direct Coordinates (5 cols) */}
           <div className="lg:col-span-5 flex flex-col gap-space-lg">

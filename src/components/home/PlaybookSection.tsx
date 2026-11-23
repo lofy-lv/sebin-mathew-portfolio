@@ -46,8 +46,8 @@ export function PlaybookSection() {
   ];
 
   return (
-    <section className="w-full py-20 px-margin-mobile lg:px-margin" id="process">
-      <div className="max-w-[1240px] mx-auto flex flex-col gap-10">
+    <section className="w-full py-20 px-6 md:px-10 lg:px-14" id="process">
+      <div className="w-full max-w-[1440px] mx-auto flex flex-col gap-10">
         {/* Section Header */}
         <div className="flex flex-col gap-2">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">

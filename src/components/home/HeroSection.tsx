@@ -7,12 +7,12 @@ import { GlowOrb } from "@/components/ui/GlowOrb";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden py-16 lg:py-24 px-margin-mobile lg:px-margin">
+    <section className="relative w-full overflow-visible py-16 lg:py-24">
       {/* Ambient atmospheric glows */}
       <GlowOrb color="primary" size="lg" className="-top-32 -left-20" />
       <GlowOrb color="secondary" size="xl" className="top-1/3 -right-24" />
 
-      <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center relative z-10">
         {/* Left Column (Hero Content) */}
         <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
           {/* Live Status Chip */}
@@ -27,7 +27,7 @@ export function HeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-display text-display lg:text-[62px] lg:leading-[70px] font-bold text-on-surface tracking-tight">
+          <h1 className="font-display text-display lg:text-[60px] xl:text-[68px] lg:leading-[68px] xl:leading-[76px] font-bold text-on-surface tracking-tight">
             Hi, I&apos;m Sebin. I turn ideas into{" "}
             <span className="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">
               products people actually use.
@@ -39,7 +39,7 @@ export function HeroSection() {
             <p className="font-headline-sm text-headline-sm text-primary-fixed-dim font-medium tracking-tight">
               {siteConfig.title}
             </p>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl xl:max-w-3xl leading-relaxed">
               {siteConfig.bio}
             </p>
           </div>
@@ -86,38 +86,27 @@ export function HeroSection() {
         </div>
 
         {/* Right Column (Portrait & Floating Badges) */}
-        <div className="lg:col-span-5 relative flex items-center justify-center mt-12 lg:mt-0">
+        <div className="lg:col-span-5 relative flex items-center justify-center mt-12 lg:mt-0 overflow-visible py-6">
           {/* Subtle Glows behind portrait */}
           <div className="absolute w-72 h-72 rounded-full bg-primary/25 blur-[90px] -top-6 -left-6 pointer-events-none"></div>
           <div className="absolute w-64 h-64 rounded-full bg-secondary/20 blur-[90px] -bottom-6 -right-6 pointer-events-none"></div>
 
           {/* Central Portrait Frame */}
-          <div className="relative w-72 sm:w-80 lg:w-84 aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high shadow-2xl ring-1 ring-outline-variant/30">
+          <div className="relative w-72 sm:w-80 lg:w-[360px] xl:w-[400px] aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high shadow-2xl ring-1 ring-outline-variant/30">
             <Image
               src={siteConfig.contact.portraitPath}
               alt={siteConfig.name}
               fill
-              sizes="(max-width: 768px) 320px, 380px"
+              sizes="(max-width: 768px) 320px, 420px"
               className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
-            <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-surface-container-lowest/85 backdrop-blur-lg border border-outline-variant/30 flex items-center justify-between">
-              <div className="flex flex-col">
-                <span className="font-label-md text-label-md font-bold text-on-surface">
-                  {siteConfig.name}
-                </span>
-                <span className="font-label-sm text-label-sm text-on-surface-variant">
-                  {siteConfig.certifications}
-                </span>
-              </div>
-              <Icons.ShieldCheck className="text-tertiary" size={22} />
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-50"></div>
           </div>
 
-          {/* Floating Glass Card 1: PRD */}
+          {/* Floating Glass Card 1: PRD (Top-Left) */}
           <div
-            className="absolute -top-4 -left-4 sm:left-4 z-20 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-surface-container-high/85 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/40 animate-bounce"
+            className="absolute -top-4 -left-3 sm:-left-6 lg:-left-8 z-20 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50 animate-bounce"
             style={{ animationDuration: "4s" }}
           >
             <div className="p-2 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
@@ -129,8 +118,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Floating Glass Card 2: Agile */}
-          <div className="absolute top-1/2 -right-6 sm:-right-4 z-20 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-surface-container-high/85 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/40">
+          {/* Floating Glass Card 2: Agile (Middle-Right) */}
+          <div className="absolute top-1/3 -right-3 sm:-right-6 lg:-right-8 z-20 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
             <div className="p-2 rounded-lg bg-tertiary/20 text-tertiary flex items-center justify-center">
               <Icons.RefreshCw size={18} />
             </div>
@@ -140,14 +129,29 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Floating Glass Card 3: AI-Ready */}
-          <div className="absolute -bottom-5 left-10 z-20 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-surface-container-high/85 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/40">
-            <div className="p-2 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center">
+          {/* Floating Glass Card 3: Sebin Mathew Identity Badge (Bottom-Left) */}
+          <div className="absolute -bottom-5 -left-3 sm:-left-6 lg:-left-8 z-20 flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
+            <div className="p-2 rounded-xl bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
+              <Icons.ShieldCheck size={20} />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-label-md text-label-md font-bold text-on-surface whitespace-nowrap">
+                {siteConfig.name}
+              </span>
+              <span className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">
+                {siteConfig.certifications}
+              </span>
+            </div>
+          </div>
+
+          {/* Floating Glass Card 4: AI-Ready (Bottom-Right) */}
+          <div className="absolute -bottom-5 -right-3 sm:-right-6 lg:-right-8 z-20 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50">
+            <div className="p-2 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
               <Icons.Sparkles size={18} />
             </div>
             <div className="flex flex-col">
-              <span className="font-headline-sm text-label-md font-bold text-on-surface">AI-ready</span>
-              <span className="font-label-sm text-label-sm text-on-surface-variant">LLM Workflows</span>
+              <span className="font-headline-sm text-label-md font-bold text-on-surface whitespace-nowrap">AI-ready</span>
+              <span className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">LLM Workflows</span>
             </div>
           </div>
         </div>

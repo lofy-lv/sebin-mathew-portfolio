@@ -17,8 +17,8 @@ export function FeaturedProjects() {
   ];
 
   return (
-    <section className="w-full py-20 px-margin-mobile lg:px-margin bg-surface-container-lowest/40 relative overflow-hidden" id="projects">
-      <div className="max-w-[1240px] mx-auto flex flex-col gap-8">
+    <section className="w-full py-20 px-6 md:px-10 lg:px-14 bg-surface-container-lowest/40 relative overflow-hidden" id="projects">
+      <div className="w-full max-w-[1440px] mx-auto flex flex-col gap-8">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="flex flex-col gap-2">

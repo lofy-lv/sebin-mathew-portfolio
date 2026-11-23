@@ -60,7 +60,7 @@ export default function ProjectsPage() {
       <GlowOrb color="tertiary" size="xl" className="top-96 left-10" />
 
       {/* Main Container */}
-      <div className="max-w-[1400px] w-full mx-auto px-margin-mobile lg:px-margin py-8 md:py-12 flex flex-col gap-10 relative z-10">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14 py-8 md:py-12 flex flex-col gap-10 relative z-10">
         {/* HEADER BLOCK */}
         <div className="flex flex-col gap-6">
           {/* Breadcrumb & Directory Badge */}

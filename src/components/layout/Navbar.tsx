@@ -37,7 +37,7 @@ export function Navbar() {
           : "bg-surface/75 backdrop-blur-md border-b border-transparent"
       }`}
     >
-      <div className="h-20 max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter">
+      <div className="h-20 w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14 flex items-center justify-between">
         {/* Brand / Logo */}
         <Link href="/" className="flex items-center gap-space-sm group">
           <div className="relative flex items-center justify-center p-0.5 rounded-full bg-surface-container-high ring-1 ring-outline-variant/40 group-hover:ring-primary/60 transition-all">

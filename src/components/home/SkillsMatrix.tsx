@@ -47,8 +47,8 @@ export function SkillsMatrix() {
       : skillsData.filter((s) => s.category === activeCategory);
 
   return (
-    <section className="w-full py-20 px-margin-mobile lg:px-margin" id="skills">
-      <div className="max-w-[1240px] mx-auto flex flex-col items-center gap-10">
+    <section className="w-full py-20 px-6 md:px-10 lg:px-14" id="skills">
+      <div className="w-full max-w-[1440px] mx-auto flex flex-col items-center gap-10">
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center gap-2 max-w-2xl">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">

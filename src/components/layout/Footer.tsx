@@ -6,7 +6,7 @@ import { Icons } from "@/components/ui/Icons";
 export function Footer() {
   return (
     <footer className="w-full bg-surface-container-lowest border-t border-outline-variant/20">
-      <div className="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14 py-space-xl flex flex-col gap-space-lg">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
           {/* Bio column */}
           <div className="md:col-span-5 flex flex-col gap-space-sm">
