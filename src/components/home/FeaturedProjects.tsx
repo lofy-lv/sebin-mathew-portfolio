@@ -10,6 +10,7 @@ export function FeaturedProjects() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
 
   // Prioritize featured projects first, followed by remaining live shipments
   const sortedProjects = useMemo(() => {
@@ -48,17 +49,47 @@ export function FeaturedProjects() {
     };
   }, [checkScroll]);
 
+  // Autoplay effect: advances card every 3.5 seconds, pauses when user hovers or interacts
+  useEffect(() => {
+    if (isPaused) return;
+
+    const timer = setInterval(() => {
+      const el = scrollRef.current;
+      if (!el) return;
+      const { scrollLeft, scrollWidth, clientWidth } = el;
+      const card = el.firstElementChild as HTMLElement;
+      const cardWidth = card ? card.offsetWidth + 20 : 340;
+
+      // Loop back to start if at the end of the carousel
+      if (scrollLeft + clientWidth >= scrollWidth - 25) {
+        el.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        el.scrollBy({ left: cardWidth, behavior: "smooth" });
+      }
+    }, 3500);
+
+    return () => clearInterval(timer);
+  }, [isPaused]);
+
   const handleScroll = (direction: "left" | "right") => {
     const el = scrollRef.current;
     if (!el) return;
+    const { scrollLeft, scrollWidth, clientWidth } = el;
     const card = el.firstElementChild as HTMLElement;
     const cardWidth = card ? card.offsetWidth + 20 : 340;
     const multiplier = typeof window !== "undefined" && window.innerWidth >= 1024 ? 2 : 1;
     const distance = cardWidth * multiplier;
-    el.scrollBy({
-      left: direction === "left" ? -distance : distance,
-      behavior: "smooth",
-    });
+
+    if (direction === "right" && scrollLeft + clientWidth >= scrollWidth - 20) {
+      el.scrollTo({ left: 0, behavior: "smooth" });
+    } else if (direction === "left" && scrollLeft <= 10) {
+      el.scrollTo({ left: scrollWidth, behavior: "smooth" });
+    } else {
+      el.scrollBy({
+        left: direction === "left" ? -distance : distance,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -114,8 +145,14 @@ export function FeaturedProjects() {
           </div>
         </div>
 
-        {/* Carousel Container with Floating Next/Prev Overlays */}
-        <div className="relative group/carousel">
+        {/* Carousel Container with Floating Next/Prev Overlays & Auto-play Pause on Hover */}
+        <div
+          className="relative group/carousel"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+        >
           {/* Floating Left Button (Desktop) */}
           <button
             type="button"
@@ -224,7 +261,7 @@ export function FeaturedProjects() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
             </span>
             <span>
-              Use the arrows or swipe horizontally to explore all {sortedProjects.length} live product deployments
+              Auto-moving showcase ({sortedProjects.length} live products) • Hover or swipe to pause, or use arrows
             </span>
           </div>
 
