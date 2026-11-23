@@ -14,7 +14,7 @@ export function DirectCoordinates() {
   };
 
   return (
-    <div className="p-6 sm:p-8 rounded-3xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/30 shadow-xl flex flex-col gap-6">
+    <div className="p-6 sm:p-8 rounded-3xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/30 shadow-xl flex flex-col justify-between h-full gap-6">
       <div className="flex flex-col gap-1">
         <h3 className="font-headline-sm text-headline-sm font-bold text-on-surface">
           Direct Coordinates
@@ -175,7 +175,7 @@ export function DirectCoordinates() {
       </div>
 
       {/* SLA Note */}
-      <div className="p-4 rounded-xl bg-tertiary/10 border border-tertiary/20 flex items-center gap-3">
+      <div className="p-4 rounded-xl bg-tertiary/10 border border-tertiary/20 flex items-center gap-3 mt-auto">
         <Icons.Sparkles className="text-tertiary shrink-0" size={20} />
         <span className="font-label-sm text-label-sm text-tertiary font-medium">
           Under 24 hours average response SLA for recruiters & clients in UAE/Global.
