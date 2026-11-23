@@ -58,19 +58,19 @@ export function AboutSection() {
           </div>
 
           {/* Social Proof Strip */}
-          <div className="p-4 rounded-2xl bg-surface-container-low/90 border border-outline-variant/30 flex items-center justify-between transition-colors shadow-sm">
-            <span className="font-label-sm text-label-sm text-on-surface-variant font-medium">
+          <div className="p-4 sm:p-5 rounded-2xl bg-surface-container-low/90 border border-outline-variant/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition-colors shadow-sm">
+            <span className="font-label-sm text-xs sm:text-label-sm text-on-surface-variant font-medium">
               Verified Profiles
             </span>
-            <div className="flex items-center gap-2">
+            <div className="grid grid-cols-3 gap-2 w-full sm:w-auto sm:flex sm:items-center sm:gap-2">
               <a
                 href={siteConfig.contact.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Sebin Mathew GitHub Profile"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high text-[#A1A1AA] hover:text-[#F8FAFC] transition-colors font-label-sm text-xs font-semibold"
+                className="flex items-center justify-center gap-1.5 px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-surface-container-high text-[#A1A1AA] hover:text-[#F8FAFC] transition-colors font-label-sm text-[11px] sm:text-xs font-semibold"
               >
-                <Icons.GitHub size={14} />
+                <Icons.GitHub size={14} className="shrink-0" />
                 <span>GitHub</span>
               </a>
               <a
@@ -78,9 +78,9 @@ export function AboutSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Sebin Mathew LinkedIn Profile"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high text-[#A1A1AA] hover:text-[#F8FAFC] transition-colors font-label-sm text-xs font-semibold"
+                className="flex items-center justify-center gap-1.5 px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-surface-container-high text-[#A1A1AA] hover:text-[#F8FAFC] transition-colors font-label-sm text-[11px] sm:text-xs font-semibold"
               >
-                <Icons.LinkedIn size={14} />
+                <Icons.LinkedIn size={14} className="shrink-0" />
                 <span>LinkedIn</span>
               </a>
               <a
@@ -88,9 +88,9 @@ export function AboutSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat with Sebin on WhatsApp"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-tertiary/10 text-tertiary hover:bg-tertiary/20 transition-colors font-label-sm text-xs font-semibold border border-tertiary/20"
+                className="flex items-center justify-center gap-1.5 px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-tertiary/10 text-tertiary hover:bg-tertiary/20 transition-colors font-label-sm text-[11px] sm:text-xs font-semibold border border-tertiary/20"
               >
-                <Icons.WhatsApp size={14} />
+                <Icons.WhatsApp size={14} className="shrink-0" />
                 <span>WhatsApp</span>
               </a>
             </div>
