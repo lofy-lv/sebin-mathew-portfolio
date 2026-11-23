@@ -5,15 +5,17 @@ import { experienceData } from "@/data/experience";
 import { Icons } from "@/components/ui/Icons";
 
 export function AboutSection() {
+  const bioParagraphs = siteConfig.fullBio.split("\n\n");
+
   return (
     <section className="w-full py-20 px-6 md:px-10 lg:px-14 bg-surface-container-lowest/50" id="about">
-      <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-14 items-stretch">
+      <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-14 items-start">
         {/* Left Column: Visual Portrait & Highlight Badges */}
-        <div className="flex flex-col justify-between gap-6 h-full">
-          <div className="relative rounded-3xl overflow-hidden bg-surface-container-low border border-outline-variant/40 shadow-2xl p-2.5 flex flex-col flex-1">
-            <div className="relative w-full aspect-[4/4.2] sm:aspect-[4/4] lg:aspect-[4/3.8] rounded-2xl overflow-hidden bg-surface-container-high">
+        <div className="flex flex-col gap-6">
+          <div className="relative rounded-3xl overflow-hidden bg-surface-container-low border border-outline-variant/40 shadow-2xl p-2.5 flex flex-col">
+            <div className="relative w-full aspect-[4/4.5] sm:aspect-[4/4.2] lg:aspect-[4/4.4] rounded-2xl overflow-hidden bg-surface-container-high">
               <Image
-                src={siteConfig.contact.portraitPath}
+                src={siteConfig.contact.aboutportraitPath}
                 alt={`${siteConfig.name} Profile`}
                 fill
                 sizes="(max-width: 768px) 100vw, 600px"
@@ -24,7 +26,7 @@ export function AboutSection() {
             </div>
 
             {/* Quick Highlights Badge */}
-            <div className="p-4 flex flex-col gap-1.5">
+            <div className="p-4 sm:p-5 flex flex-col gap-1.5">
               <div className="flex items-center gap-2 text-tertiary">
                 <Icons.School size={20} className="shrink-0" />
                 <span className="font-label-md text-label-md font-semibold text-on-surface">
@@ -77,9 +79,10 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* Right Column: Narrative & Experience Roadmap */}
-        <div className="flex flex-col justify-between gap-6 h-full">
-          <div className="flex flex-col gap-6">
+        {/* Right Column: Narrative, Experience Roadmap & Skills */}
+        <div className="flex flex-col gap-7">
+          {/* Top: Narrative */}
+          <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <span className="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">
                 BACKGROUND & JOURNEY
@@ -89,63 +92,84 @@ export function AboutSection() {
               </h2>
             </div>
 
-            <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              {siteConfig.fullBio}
-            </p>
+            <div className="flex flex-col gap-3 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              {bioParagraphs.map((para, pIdx) => (
+                <p key={pIdx}>{para}</p>
+              ))}
+            </div>
+          </div>
 
-            {/* Experience Roadmap */}
-            <div className="flex flex-col gap-3.5">
-              <span className="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">
-                Experience Roadmap
-              </span>
+          {/* Middle: Experience Roadmap with Breathing Room */}
+          <div className="flex flex-col gap-4">
+            <span className="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">
+              Experience Roadmap
+            </span>
 
+            <div className="flex flex-col gap-4">
               {experienceData.map((exp, idx) => (
                 <div
                   key={idx}
-                  className="flex gap-4 p-4.5 rounded-2xl bg-surface-container-low/80 hover:bg-surface-container-low border border-outline-variant/30 transition-all"
+                  className="flex gap-4 p-5 sm:p-6 rounded-2xl bg-surface-container-low/90 hover:bg-surface-container-low border border-outline-variant/30 hover:border-outline-variant/50 transition-all shadow-sm"
                 >
-                  <div className="flex flex-col items-center pt-1">
+                  <div className="flex flex-col items-center pt-1.5">
                     <span
-                      className={`w-3 h-3 rounded-full shrink-0 ${
-                        exp.color === "secondary" ? "bg-secondary" : "bg-tertiary"
+                      className={`w-3.5 h-3.5 rounded-full shrink-0 ring-4 ${
+                        exp.color === "secondary"
+                          ? "bg-secondary ring-secondary/20"
+                          : "bg-tertiary ring-tertiary/20"
                       }`}
                     ></span>
                     {idx < experienceData.length - 1 && (
-                      <span className="w-0.5 h-full bg-surface-container-highest my-1"></span>
+                      <span className="w-0.5 h-full bg-outline-variant/30 my-2"></span>
                     )}
                   </div>
 
-                  <div className="flex flex-col gap-1 flex-1">
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                      <span className="font-headline-sm text-headline-sm font-semibold text-on-surface">
-                        {exp.role}
-                      </span>
+                  <div className="flex flex-col gap-2.5 flex-1">
+                    <div className="flex flex-wrap items-start justify-between gap-2">
+                      <div className="flex flex-col">
+                        <span className="font-headline-sm text-base sm:text-lg font-bold text-on-surface leading-snug">
+                          {exp.role}
+                        </span>
+                        <span className="font-body-sm text-primary font-medium mt-0.5">
+                          {exp.company}
+                        </span>
+                      </div>
                       <span
-                        className={`font-label-sm text-label-sm px-2.5 py-0.5 rounded-md font-medium ${
+                        className={`font-label-sm text-xs px-3 py-1 rounded-full font-semibold border ${
                           exp.color === "secondary"
-                            ? "text-secondary bg-secondary/10"
-                            : "text-tertiary bg-tertiary/10"
+                            ? "text-secondary bg-secondary/10 border-secondary/20"
+                            : "text-tertiary bg-tertiary/10 border-tertiary/20"
                         }`}
                       >
                         {exp.period}
                       </span>
                     </div>
 
-                    <span className="font-body-sm text-body-sm text-primary font-medium">
-                      {exp.company}
-                    </span>
-
-                    <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
+                    <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
                       {exp.description}
                     </p>
+
+                    {exp.highlights && exp.highlights.length > 0 && (
+                      <ul className="flex flex-col gap-1.5 pt-2 mt-1 border-t border-outline-variant/20">
+                        {exp.highlights.slice(0, 3).map((item, hIdx) => (
+                          <li
+                            key={hIdx}
+                            className="flex items-start gap-2 text-xs sm:text-body-sm text-on-surface-variant/90 leading-relaxed"
+                          >
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-tertiary/60 shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Bottom Row: Capabilities & Languages */}
-          <div className="flex flex-col gap-4 pt-2">
+          {/* Bottom: Core Competencies & Languages (Directly Connected) */}
+          <div className="flex flex-col gap-4 pt-1">
             {/* Capability Chips */}
             <div className="flex flex-col gap-2">
               <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">

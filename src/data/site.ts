@@ -5,7 +5,7 @@ export const siteConfig = {
   certifications: "PMP® Trained · CSM®",
   bio: "I've taken 33+ web, SaaS and mobile projects from first idea to live launch, with a hands-on background in MERN, Next.js, APIs and AI tools.",
   fullBio:
-    "My path began with a rigorous foundation in mechanical engineering, which honed my systematic approach to problem solving, before transitioning into full-stack MERN software engineering. Today, as a Technical Project Manager, I bridge complex client visions with cross-functional engineering execution—authoring air-tight PRDs, establishing agile sprint cadence, and guaranteeing zero-downtime releases.",
+    "My path began with a rigorous foundation in mechanical engineering, which honed a systematic approach to process architecture, systems thinking, and technical problem solving, before transitioning into full-stack software development with the MERN stack and Next.js.\n\nToday, as a Technical Project Manager based in Dubai, I bridge complex stakeholder visions with cross-functional engineering execution. Having directed 33+ commercial software releases across web, SaaS, and mobile platforms, I specialize in authoring air-tight PRDs, structuring agile sprint cadences in Jira, leading UAT verification, and ensuring zero-downtime production deployments.",
   availability: {
     status: "Available Immediately in Dubai",
     visa: "Visit Visa",
@@ -25,7 +25,8 @@ export const siteConfig = {
     githubUrl: "https://github.com/lofy-lv",
     githubDisplay: "lofy-lv",
     cvPath: "/assets/Sebin-Mathew-CV.pdf",
-    portraitPath: "/assets/sebin-portrait.jpg",
+    portraitPath: "/assets/sebin-portrait3.jpg",
+    aboutportraitPath: "/assets/sebin-portrait.jpg",
   },
   languages: [
     { name: "English", level: "Fluent" },
