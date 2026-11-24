@@ -115,7 +115,7 @@ export function HeroSection() {
               </div>
               <div className="flex flex-col">
                 <span className="font-headline-sm text-xs sm:text-label-md font-bold text-on-surface">PRD</span>
-                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">Specs & Scopes</span>
+                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">Specs</span>
               </div>
             </div>
 
@@ -127,24 +127,24 @@ export function HeroSection() {
                 <Icons.RefreshCw size={16} />
               </div>
               <div className="flex flex-col">
-                <span className="font-headline-sm text-xs sm:text-label-md font-bold text-on-surface">Agile</span>
-                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">2-Wk Sprints</span>
+                <span className="font-headline-sm text-xs sm:text-label-md font-bold text-on-surface">Pre-Sales</span>
+                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">Scoping</span>
               </div>
             </div>
 
-            {/* Floating Glass Card 3: Sebin Mathew Identity Badge (Bottom-Left) */}
+            {/* Floating Glass Card 3: Deploy / Cloud (Bottom-Left) */}
             <div
               className="absolute -bottom-3 -left-2 sm:-left-5 z-20 flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-2xl bg-surface-container-high/95 backdrop-blur-xl border border-outline-variant/40 shadow-xl shadow-surface-container-lowest/50 animate-float-3 hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer"
             >
-              <div className="p-1.5 rounded-xl bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
-                <Icons.ShieldCheck size={18} />
+              <div className="p-1.5 rounded-lg bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
+                <Icons.Cloud size={16} />
               </div>
               <div className="flex flex-col">
-                <span className="font-label-md text-xs sm:text-label-md font-bold text-on-surface whitespace-nowrap">
-                  {siteConfig.name}
+                <span className="font-headline-sm text-xs sm:text-label-md font-bold text-on-surface whitespace-nowrap">
+                  Deploy
                 </span>
                 <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">
-                  {siteConfig.certifications}
+                  Cloud
                 </span>
               </div>
             </div>
@@ -157,8 +157,8 @@ export function HeroSection() {
                 <Icons.Sparkles size={16} />
               </div>
               <div className="flex flex-col">
-                <span className="font-headline-sm text-xs sm:text-label-md font-bold text-on-surface whitespace-nowrap">AI-ready</span>
-                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">LLM Workflows</span>
+                <span className="font-headline-sm text-xs sm:text-label-md font-bold text-on-surface whitespace-nowrap">Development</span>
+                <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant whitespace-nowrap">Full-Stack</span>
               </div>
             </div>
           </div>
