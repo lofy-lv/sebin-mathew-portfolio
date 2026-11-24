@@ -6,35 +6,78 @@ import { FloatingContactWidget } from "@/components/ui/FloatingContactWidget";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sebinmathew.com"),
-  title: "Sebin Mathew | Technical Project Manager & Business Analyst",
+  title: {
+    default: "Sebin Mathew | Technical Project Manager & Business Analyst",
+    template: "%s | Sebin Mathew",
+  },
   description:
-    "Portfolio of Sebin Mathew - Technical Project Manager & Business Analyst in Dubai, UAE. Shipped 34+ web, SaaS, and mobile products across fintech, logistics, and enterprise ecosystems.",
+    "Portfolio of Sebin Mathew — Technical Project Manager & Business Analyst based in Dubai, UAE. Shipped 33+ web, SaaS, and mobile products across fintech, logistics, and enterprise ecosystems.",
   keywords: [
+    "Sebin Mathew",
     "Technical Project Manager",
     "Business Analyst",
     "Dubai TPM",
-    "Agile",
-    "Scrum",
-    "PRD",
-    "MERN",
+    "Tech Lead Dubai",
+    "Agile Delivery",
+    "Scrum Master",
+    "PRD Authoring",
+    "MERN Stack",
     "Next.js",
-    "Sebin Mathew",
+    "Software Product Management",
+    "SaaS Architecture",
+    "Dubai Tech Jobs",
   ],
-  authors: [{ name: "Sebin Mathew" }],
+  authors: [{ name: "Sebin Mathew", url: "https://sebinmathew.com" }],
+  creator: "Sebin Mathew",
+  publisher: "Sebin Mathew",
+  alternates: {
+    canonical: "https://sebinmathew.com",
+  },
   openGraph: {
     title: "Sebin Mathew | Technical Project Manager & Business Analyst",
     description:
-      "Turning ideas into products people actually use. 34+ commercial products shipped.",
+      "Technical Project Manager & Business Analyst based in Dubai. 33+ verified commercial web, SaaS, and mobile products shipped with 100% CSAT.",
     url: "https://sebinmathew.com",
     siteName: "Sebin Mathew Portfolio",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sebin Mathew — Technical Project Manager | Business Analyst",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sebin Mathew | Technical Project Manager & Business Analyst",
     description:
-      "Turning ideas into products people actually use. 34+ commercial products shipped.",
+      "Technical Project Manager & Business Analyst based in Dubai. 33+ verified commercial products shipped with 100% CSAT.",
+    images: ["/og-image.png"],
+    creator: "@sebinmathew",
+  },
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.ico", sizes: "48x48" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

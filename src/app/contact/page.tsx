@@ -1,10 +1,22 @@
 import React from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { siteConfig } from "@/data/site-config";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { DirectCoordinates } from "@/components/contact/DirectCoordinates";
 import { Icons } from "@/components/ui/Icons";
 import { GlowOrb } from "@/components/ui/GlowOrb";
+
+export const metadata: Metadata = {
+  title: "Contact & Dubai Coordinates",
+  description:
+    "Direct contact coordinates for Sebin Mathew — Technical Project Manager & Business Analyst based in Dubai. Available immediately for full-time leadership and contract engagements.",
+  openGraph: {
+    title: "Contact & Dubai Coordinates | Sebin Mathew",
+    description:
+      "Direct contact coordinates for Sebin Mathew — Technical Project Manager & Business Analyst based in Dubai. Available immediately for full-time leadership and contract engagements.",
+  },
+};
 
 export default function ContactPage() {
   return (
