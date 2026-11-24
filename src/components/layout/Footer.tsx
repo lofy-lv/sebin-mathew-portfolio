@@ -19,7 +19,7 @@ export function Footer() {
               </span>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-sm">
-              Technical Project Manager & Business Analyst delivering 33+ web, SaaS, and AI products across fintech, logistics, and enterprise ecosystems.
+              Technical Project Manager & Full Stack Developer delivering 33+ web, SaaS, and AI products across fintech, logistics, and enterprise ecosystems.
             </p>
           </div>
 

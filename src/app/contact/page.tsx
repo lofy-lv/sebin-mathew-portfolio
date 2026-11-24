@@ -10,11 +10,11 @@ import { GlowOrb } from "@/components/ui/GlowOrb";
 export const metadata: Metadata = {
   title: "Contact & Dubai Coordinates",
   description:
-    "Direct contact coordinates for Sebin Mathew — Technical Project Manager & Business Analyst based in Dubai. Available immediately for full-time leadership and contract engagements.",
+    "Direct contact coordinates for Sebin Mathew — Technical Project Manager & Full Stack Developer based in Dubai. Available immediately for full-time leadership and contract engagements.",
   openGraph: {
     title: "Contact & Dubai Coordinates | Sebin Mathew",
     description:
-      "Direct contact coordinates for Sebin Mathew — Technical Project Manager & Business Analyst based in Dubai. Available immediately for full-time leadership and contract engagements.",
+      "Direct contact coordinates for Sebin Mathew — Technical Project Manager & Full Stack Developer based in Dubai. Available immediately for full-time leadership and contract engagements.",
   },
 };
 

@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Sebin Mathew",
-  title: "Technical Project Manager | Business Analyst",
+  title: "Technical Project Manager | Full Stack Developer",
   shortRole: "TPM · Tech Lead",
   certifications: "Full Stack MERN",
   bio: "I've taken 33+ web, SaaS and mobile projects from first idea to live launch, with a hands-on background in MERN, Next.js, APIs and AI tools.",

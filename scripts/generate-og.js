@@ -56,7 +56,7 @@ const svg = `
     Sebin Mathew
   </text>
   <text x="190" y="232" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="url(#titleGrad)" letter-spacing="0.5">
-    TECHNICAL PROJECT MANAGER · BUSINESS ANALYST
+    TECHNICAL PROJECT MANAGER · FULL STACK DEVELOPER
   </text>
 
   <!-- Core Proposition -->
