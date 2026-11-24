@@ -37,7 +37,8 @@ export function HeroSection() {
           {/* Subtitle & Bio */}
           <div className="flex flex-col gap-2">
             <p className="font-headline-sm text-headline-sm text-primary-fixed-dim font-medium tracking-tight">
-              {siteConfig.title}
+              <span className="sm:inline block">Technical Project Manager |</span>{" "}
+              <span className="inline-block">Full Stack Developer</span>
             </p>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl xl:max-w-3xl leading-relaxed">
               {siteConfig.bio}
