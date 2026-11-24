@@ -47,8 +47,8 @@ const svg = `
 
   <!-- Logo Mark Container -->
   <g transform="translate(70, 145)">
-    <rect width="96" height="96" rx="48" fill="#1A1D24" stroke="rgba(161, 161, 170, 0.3)" stroke-width="1.5" />
-    <image href="${logoUri}" x="8" y="8" width="80" height="80" />
+    <rect width="96" height="96" rx="48" fill="#FFFFFF" stroke="rgba(255, 255, 255, 0.5)" stroke-width="2" />
+    <image href="${logoUri}" x="12" y="12" width="72" height="72" />
   </g>
 
   <!-- Name & Roles -->

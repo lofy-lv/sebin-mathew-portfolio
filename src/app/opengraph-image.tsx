@@ -103,9 +103,9 @@ export default async function Image() {
                 width: "104px",
                 height: "104px",
                 borderRadius: "52px",
-                backgroundColor: "#161922",
-                border: "1.5px solid rgba(161, 161, 170, 0.3)",
-                padding: "8px",
+                backgroundColor: "#FFFFFF",
+                border: "2px solid rgba(255, 255, 255, 0.6)",
+                padding: "12px",
               }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -113,8 +113,8 @@ export default async function Image() {
                 src={logoDataUrl}
                 alt="Sebin Mathew Logo"
                 style={{
-                  width: "88px",
-                  height: "88px",
+                  width: "80px",
+                  height: "80px",
                   objectFit: "contain",
                 }}
               />

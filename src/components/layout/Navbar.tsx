@@ -40,14 +40,14 @@ export function Navbar() {
       <div className="h-20 w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14 flex items-center justify-between">
         {/* Brand / Logo */}
         <Link href="/" className="flex items-center gap-space-sm group">
-          <div className="relative flex items-center justify-center p-1 rounded-full bg-surface-container-high ring-1 ring-outline-variant/40 group-hover:ring-primary/60 transition-all">
-            <div className="w-8 h-8 rounded-full overflow-hidden relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center p-0.5 rounded-full bg-white ring-1 ring-white/20 group-hover:ring-primary/60 transition-all shadow-sm">
+            <div className="w-8 h-8 rounded-full overflow-hidden relative flex items-center justify-center bg-white">
               <Image
                 src={siteConfig.contact.logoportraitPath}
                 alt={siteConfig.name}
                 fill
                 sizes="32px"
-                className="object-contain"
+                className="object-contain p-1"
                 priority
               />
             </div>
