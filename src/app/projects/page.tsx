@@ -1,15 +1,24 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { projectCategories, projectsData } from "@/data/projects";
 import { Icons } from "@/components/ui/Icons";
 import { GlowOrb } from "@/components/ui/GlowOrb";
 import { ProjectThumbnail } from "@/components/ui/ProjectThumbnail";
 
+const INITIAL_PROJECTS_COUNT = 8;
+const LOAD_MORE_COUNT = 8;
+
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState<number>(INITIAL_PROJECTS_COUNT);
+
+  // Reset visible projects count when filter or search changes
+  useEffect(() => {
+    setVisibleCount(INITIAL_PROJECTS_COUNT);
+  }, [selectedCategory, searchQuery]);
 
   // Dynamic Dashboard Counters
   const totalCount = projectsData.length;
@@ -51,6 +60,12 @@ export default function ProjectsPage() {
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchQuery]);
+
+  const displayedProjects = useMemo(() => {
+    return filteredProjects.slice(0, visibleCount);
+  }, [filteredProjects, visibleCount]);
+
+  const hasMore = visibleCount < filteredProjects.length;
 
   return (
     <main className="w-full bg-surface min-h-[calc(100vh-80px)] relative overflow-hidden">
@@ -223,8 +238,9 @@ export default function ProjectsPage() {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProjects.map((project) => {
+          <div className="flex flex-col gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {displayedProjects.map((project) => {
               const projectLink = project.domain || project.liveUrl;
               const displayDomain = projectLink
                 ? projectLink.replace(/^https?:\/\//, "").replace(/\/.*$/, "")
@@ -327,7 +343,24 @@ export default function ProjectsPage() {
               );
             })}
           </div>
-        )}
+
+          {/* Load More Button */}
+          {hasMore && (
+            <div className="flex flex-col items-center justify-center pt-2 pb-6 gap-3">
+              <button
+                onClick={() => setVisibleCount((prev) => prev + LOAD_MORE_COUNT)}
+                className="px-8 py-3.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/40 hover:border-primary/50 text-on-surface hover:text-primary font-headline-sm text-label-md font-semibold transition-all duration-300 shadow-md hover:shadow-glow-amber active:scale-95 flex items-center gap-2 group cursor-pointer"
+              >
+                <span>Load More Projects</span>
+                <Icons.ChevronDown size={18} className="group-hover:translate-y-0.5 transition-transform" />
+              </button>
+              <span className="font-label-sm text-xs text-on-surface-variant">
+                Showing {displayedProjects.length} of {filteredProjects.length} projects
+              </span>
+            </div>
+          )}
+        </div>
+      )}
       </div>
     </main>
   );
