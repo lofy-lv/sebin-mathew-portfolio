@@ -12,10 +12,10 @@ function SkillCard({ skill }: { skill: SkillItem }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="flex flex-col items-center gap-2.5 group cursor-pointer w-full text-center"
+      className="flex flex-col items-center gap-1.5 sm:gap-2.5 group cursor-pointer w-full text-center"
     >
       <div
-        className="w-16 h-16 rounded-2xl bg-surface-container border border-outline-variant/40 flex items-center justify-center p-3.5 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:bg-surface-container-high"
+        className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-surface-container border border-outline-variant/40 flex items-center justify-center p-2.5 sm:p-3.5 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:bg-surface-container-high"
         style={{
           color: hovered ? skill.brandColor : "#A1A1AA",
           borderColor: hovered ? `${skill.brandColor}99` : undefined,
@@ -24,10 +24,10 @@ function SkillCard({ skill }: { skill: SkillItem }) {
             : undefined,
         }}
       >
-        <BrandIcon iconKey={skill.iconKey} size={28} />
+        <BrandIcon iconKey={skill.iconKey} size={28} className="w-6 h-6 sm:w-7 sm:h-7 shrink-0" />
       </div>
       <span
-        className="font-label-sm text-xs transition-colors duration-200 text-center font-medium leading-tight px-1 whitespace-nowrap overflow-visible"
+        className="font-label-sm text-[11px] sm:text-xs transition-colors duration-200 text-center font-medium leading-tight px-0.5 line-clamp-2 max-w-full"
         style={{
           color: hovered ? "#F8FAFC" : "#A1A1AA",
         }}
@@ -47,7 +47,7 @@ export function SkillsMatrix() {
       : skillsData.filter((s) => s.category === activeCategory);
 
   return (
-    <section className="w-full py-20 px-6 md:px-10 lg:px-14" id="skills">
+    <section className="w-full py-20 px-4 sm:px-6 md:px-10 lg:px-14" id="skills">
       <div className="w-full max-w-[1440px] mx-auto flex flex-col items-center gap-10">
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center gap-2 max-w-2xl">
@@ -63,14 +63,14 @@ export function SkillsMatrix() {
         </div>
 
         {/* Tab Switcher */}
-        <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-full bg-surface-container-low/90 backdrop-blur-md border border-outline-variant/40 shadow-md">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 p-1.5 rounded-3xl sm:rounded-full bg-surface-container-low/90 backdrop-blur-md border border-outline-variant/40 shadow-md">
           {skillCategories.map((cat) => {
             const isActive = activeCategory === cat.id;
             return (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-300 ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-label-md text-xs sm:text-label-md transition-all duration-300 ${
                   isActive
                     ? "bg-gradient-to-r from-primary-container to-secondary text-on-primary font-semibold shadow-sm"
                     : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-medium"
@@ -82,8 +82,8 @@ export function SkillsMatrix() {
           })}
         </div>
 
-        {/* 32-Tile Responsive Grid (Exact 4 rows of 8 on lg:grid-cols-8) */}
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-y-8 gap-x-3 justify-items-center pt-4">
+        {/* 32-Tile Responsive Grid (4 per row on mobile, 6 on md, 8 on lg) */}
+        <div className="w-full grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-y-6 sm:gap-y-8 gap-x-2 sm:gap-x-3 justify-items-center pt-4">
           {filteredSkills.map((skill) => (
             <SkillCard key={skill.id} skill={skill} />
           ))}
