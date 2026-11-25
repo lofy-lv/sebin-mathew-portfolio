@@ -1,3 +1,10 @@
+/**
+ * @file src/components/home/HeroSection.tsx
+ * @description Executive Hero Section for Sebin Mathew
+ * Features: High-impact typography, immediate action CTAs (Contact, WhatsApp, Call, CV),
+ * and optimized executive portrait with floating specialty badges.
+ */
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +14,7 @@ import { GlowOrb } from "@/components/ui/GlowOrb";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full overflow-x-clip py-16 lg:py-24">
+    <section className="relative w-full overflow-x-clip pt-8 pb-16 sm:py-16 lg:py-24">
       {/* Ambient atmospheric glows */}
       <GlowOrb color="primary" size="lg" className="-top-32 -left-20" />
       <GlowOrb color="secondary" size="xl" className="top-1/3 right-0" />

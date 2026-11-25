@@ -1,3 +1,10 @@
+/**
+ * @file src/components/contact/ContactForm.tsx
+ * @description Contact Form Component with Web3Forms Integration
+ * Features: Client-side validation, loading spinners, success message states,
+ * and fallback to direct email on network failure.
+ */
+
 "use client";
 
 import React, { useState } from "react";
@@ -7,7 +14,7 @@ export function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    projectType: "Full-Time TPM / Lead",
+    projectType: "Technical PM / Product Owner",
     message: "",
   });
 
@@ -47,7 +54,7 @@ export function ContactForm() {
         setFormData({
           name: "",
           email: "",
-          projectType: "Full-Time TPM / Lead",
+          projectType: "Technical PM / Product Owner",
           message: "",
         });
       } else {
@@ -127,20 +134,33 @@ export function ContactForm() {
             </div>
 
             {/* Engagement Type */}
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-1.5 min-w-0">
               <label className="font-label-md text-label-md text-on-surface font-semibold">
                 Engagement Nature
               </label>
-              <select
-                value={formData.projectType}
-                onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-surface-container-high border border-outline-variant/30 text-on-surface focus:outline-none focus:ring-2 focus:ring-primary font-body-md text-body-md"
-              >
-                <option value="Full-Time TPM / Product Owner">Full-Time Role: Technical Project Manager / Product Owner</option>
-<option value="Full-Time Full-Stack / Next.js Developer">Full-Time Role: Full-Stack / Next.js Developer</option>
-<option value="Freelance / Project Inquiry">Freelance / Project Inquiry</option>
-                <option value="General Exploration">General Discussion / Tech Consultation</option>
-              </select>
+              <div className="relative w-full min-w-0">
+                <select
+                  value={formData.projectType}
+                  onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
+                  className="w-full max-w-full truncate px-4 py-3 pr-10 rounded-xl bg-surface-container-high border border-outline-variant/30 text-on-surface focus:outline-none focus:ring-2 focus:ring-primary font-body-md text-body-md cursor-pointer appearance-none"
+                >
+                  <option value="Technical PM / Product Owner" className="bg-[#1e1f25] text-[#e2e2e9]">
+                    Technical PM / Product Owner
+                  </option>
+                  <option value="Full-Stack Developer (MERN / Next.js)" className="bg-[#1e1f25] text-[#e2e2e9]">
+                    Full-Stack Developer (MERN / Next.js)
+                  </option>
+                  <option value="Freelance / Project Delivery" className="bg-[#1e1f25] text-[#e2e2e9]">
+                    Freelance / Project Delivery
+                  </option>
+                  <option value="Consultation & Advisory" className="bg-[#1e1f25] text-[#e2e2e9]">
+                    Consultation & Advisory
+                  </option>
+                </select>
+                <div className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-outline">
+                  <Icons.ChevronDown size={18} />
+                </div>
+              </div>
             </div>
 
             {/* Message */}

@@ -1,3 +1,10 @@
+/**
+ * @file src/app/contact/page.tsx
+ * @description Direct Contact Coordinates & Inquiries Page
+ * Features: Web3Forms submission integration, WhatsApp fast-track routing,
+ * phone/email coordinates, and location availability status in Dubai, UAE.
+ */
+
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";

@@ -1,3 +1,11 @@
+/**
+ * @file src/app/page.tsx
+ * @description Main Executive Portfolio Landing Page for Sebin Mathew
+ * Highlights: Executive Hero, Live Impact Metrics, Skills Matrix (32 items),
+ * About Me & Leadership, Product Delivery Playbook, Featured Projects,
+ * Signature Case Studies, and Direct Contact Coordinates.
+ */
+
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ImpactStrip } from "@/components/home/ImpactStrip";

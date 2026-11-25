@@ -1,3 +1,10 @@
+/**
+ * @file src/components/contact/DirectCoordinates.tsx
+ * @description Direct Channels & Contact Information Panel
+ * Features: Click-to-copy email with toast feedback, direct telephone calling,
+ * and WhatsApp fast-track link with Dubai timezone indicators.
+ */
+
 "use client";
 
 import React, { useState } from "react";

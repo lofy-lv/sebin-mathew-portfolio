@@ -1,3 +1,10 @@
+/**
+ * @file src/components/home/FeaturedProjects.tsx
+ * @description Interactive Featured Projects Showcase Carousel
+ * Features: Smooth auto-advance carousel with hover/touch pause, keyboard/button navigation,
+ * and branded card fallbacks with zero layout shift.
+ */
+
 "use client";
 
 import React, { useRef, useState, useEffect, useCallback, useMemo } from "react";

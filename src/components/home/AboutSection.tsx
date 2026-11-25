@@ -1,3 +1,10 @@
+/**
+ * @file src/components/home/AboutSection.tsx
+ * @description Executive Profile, Leadership Philosophy & Experience Roadmap
+ * Highlights: Systems engineering discipline, MERN/Next.js foundation,
+ * 6 Core Competencies, Career Timeline, and Dubai immediate availability.
+ */
+
 import React from "react";
 import Image from "next/image";
 import { siteConfig } from "@/data/site-config";
@@ -137,7 +144,6 @@ export function AboutSection() {
                   fill
                   sizes="(max-width: 768px) 100vw, 550px"
                   className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
-                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/20 to-transparent"></div>
 

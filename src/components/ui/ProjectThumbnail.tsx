@@ -1,3 +1,9 @@
+/**
+ * @file ProjectThumbnail (src/components/ui/ProjectThumbnail.tsx)
+ * @description Renders project card thumbnails with lazy loading or an architectural branded fallback
+ * displaying category pills, domain watermarks, and category-accented ambient glow effects.
+ */
+
 "use client";
 
 import React, { useState } from "react";
@@ -92,6 +98,7 @@ export function ProjectThumbnail({
           src={src}
           alt={title}
           fill
+          loading="lazy"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           onError={() => setImgError(true)}

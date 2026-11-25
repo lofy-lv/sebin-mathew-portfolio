@@ -1,3 +1,10 @@
+/**
+ * @file src/components/home/PlaybookSection.tsx
+ * @description Product Delivery Playbook & SDLC Methodology
+ * Outlines the structured 6-phase engineering lifecycle: Discover, PRD, Sprints,
+ * Code & Integrate, QA / UAT Verification, and Production Deployment.
+ */
+
 import React from "react";
 import { Icons } from "@/components/ui/Icons";
 

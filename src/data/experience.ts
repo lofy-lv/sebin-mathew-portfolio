@@ -1,3 +1,9 @@
+/**
+ * @file src/data/experience.ts
+ * @description Professional Experience & Academic Background Catalog
+ * Contains verified career milestones, technical PM responsibilities, and engineering education.
+ */
+
 import { ExperienceItem } from "@/types";
 
 export const experienceData: ExperienceItem[] = [

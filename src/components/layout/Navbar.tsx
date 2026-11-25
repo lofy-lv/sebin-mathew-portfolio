@@ -20,6 +20,11 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Automatically close mobile menu when navigating to a new path
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
   const navLinks = [
     { name: "About", href: "/#about" },
     { name: "Skills", href: "/#skills" },
@@ -39,7 +44,11 @@ export function Navbar() {
     >
       <div className="h-20 w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14 flex items-center justify-between">
         {/* Brand / Logo */}
-        <Link href="/" className="flex items-center gap-space-sm group">
+        <Link
+          href="/"
+          onClick={() => setMobileMenuOpen(false)}
+          className="flex items-center gap-space-sm group"
+        >
           <div className="relative flex items-center justify-center p-0.5 rounded-full bg-white ring-1 ring-white/20 group-hover:ring-primary/60 transition-all shadow-sm">
             <div className="w-8 h-8 rounded-full overflow-hidden relative flex items-center justify-center bg-white">
               <Image
@@ -101,6 +110,7 @@ export function Navbar() {
           {/* Primary CTA */}
           <Link
             href="/contact"
+            onClick={() => setMobileMenuOpen(false)}
             className="inline-flex items-center justify-center px-space-md py-2.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary text-on-primary font-headline-sm text-label-md font-semibold shadow-glow-amber hover:brightness-110 active:scale-95 transition-all"
           >
             Get in Touch
@@ -148,6 +158,7 @@ export function Navbar() {
             <a
               href={siteConfig.contact.cvPath}
               download
+              onClick={() => setMobileMenuOpen(false)}
               className="inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-body-sm font-medium hover:bg-surface-container-high transition-colors"
             >
               <Icons.Download size={16} />
@@ -155,6 +166,7 @@ export function Navbar() {
             </a>
             <a
               href={siteConfig.contact.phoneHref}
+              onClick={() => setMobileMenuOpen(false)}
               className="inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-surface-container text-tertiary font-label-md text-body-sm font-medium hover:bg-surface-container-high transition-colors"
             >
               <Icons.Phone size={16} />

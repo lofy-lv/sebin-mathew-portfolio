@@ -1,3 +1,10 @@
+/**
+ * @file src/components/home/CaseStudiesSection.tsx
+ * @description In-Depth Enterprise Case Studies
+ * Highlights deep-dive problem, solution, deliverables, and architecture metrics
+ * for flagship client shipments.
+ */
+
 "use client";
 
 import React, { useState } from "react";

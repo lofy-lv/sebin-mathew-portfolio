@@ -1,3 +1,10 @@
+/**
+ * @file src/data/skills.ts
+ * @description Technical Skills & Tools Data Catalog
+ * Contains 32 curated technologies organized into 4 core categories:
+ * Agile & PM (8), Code & APIs (11), AI Workflows (7), and Cloud & DevOps (6).
+ */
+
 import { SkillCategory, SkillItem } from "@/types";
 
 export const skillCategories: { id: SkillCategory; label: string }[] = [

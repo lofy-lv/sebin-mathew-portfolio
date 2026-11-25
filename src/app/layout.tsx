@@ -1,17 +1,34 @@
+/**
+ * @file RootLayout (src/app/layout.tsx)
+ * @description Master HTML layout for Sebin Mathew's portfolio.
+ * Configures Google Fonts (Inter, Space Grotesk) with preconnect for low-ms latency,
+ * dynamic metadata resolving production Vercel/custom domain URLs, OpenGraph previews,
+ * and global layout wrappers (Navbar, Footer, FloatingContactWidget).
+ */
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingContactWidget } from "@/components/ui/FloatingContactWidget";
 
+// Dynamic production URL resolution for Vercel and local environments
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sebinmathew.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Sebin Mathew | Technical Project Manager & Full Stack Developer",
     template: "%s | Sebin Mathew",
   },
   description:
-    "Portfolio of Sebin Mathew — Technical Project Manager & Full Stack Developer based in Dubai, UAE. Shipped 33+ web, SaaS, and mobile products across fintech, logistics, and enterprise ecosystems.",
+    "Portfolio of Sebin Mathew — Technical Project Manager & Full Stack Developer based in Dubai, UAE. Shipped 33+ commercial web, SaaS, and mobile products across fintech, logistics, and enterprise ecosystems.",
   keywords: [
     "Sebin Mathew",
     "Technical Project Manager",
@@ -27,17 +44,17 @@ export const metadata: Metadata = {
     "SaaS Architecture",
     "Dubai Tech Jobs",
   ],
-  authors: [{ name: "Sebin Mathew", url: "https://sebinmathew.com" }],
+  authors: [{ name: "Sebin Mathew", url: siteUrl }],
   creator: "Sebin Mathew",
   publisher: "Sebin Mathew",
   alternates: {
-    canonical: "https://sebinmathew.com",
+    canonical: siteUrl,
   },
   openGraph: {
     title: "Sebin Mathew | Technical Project Manager & Full Stack Developer",
     description:
       "Technical Project Manager & Full Stack Developer based in Dubai. 33+ verified commercial web, SaaS, and mobile products shipped with 100% CSAT.",
-    url: "https://sebinmathew.com",
+    url: siteUrl,
     siteName: "Sebin Mathew Portfolio",
     locale: "en_US",
     type: "website",
@@ -57,7 +74,6 @@ export const metadata: Metadata = {
     description:
       "Technical Project Manager & Full Stack Developer based in Dubai. 33+ verified commercial products shipped with 100% CSAT.",
     images: ["/og-image.png"],
-    creator: "@sebinmathew",
   },
   icons: {
     icon: [
@@ -97,9 +113,16 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-surface text-on-surface antialiased min-h-screen flex flex-col max-w-full overflow-x-clip">
+        {/* === Header Navigation === */}
         <Navbar />
-        <div className="flex-1 pt-20">{children}</div>
+
+        {/* === Main Content Route Slot === */}
+        <div className="flex-1 flex flex-col pt-20">{children}</div>
+
+        {/* === Footer Navigation & Dubai Coordinates === */}
         <Footer />
+
+        {/* === Floating Quick-Contact Widgets (WhatsApp & Call) === */}
         <FloatingContactWidget />
       </body>
     </html>

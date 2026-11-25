@@ -1,3 +1,10 @@
+/**
+ * @file src/components/home/SkillsMatrix.tsx
+ * @description Interactive Skills Matrix Component
+ * Features: 32 official brand tools organized in a 4x8 desktop layout,
+ * dynamic category filtering tabs, and brand-accented hover effects.
+ */
+
 "use client";
 
 import React, { useState, useMemo } from "react";

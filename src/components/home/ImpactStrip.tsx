@@ -1,3 +1,10 @@
+/**
+ * @file src/components/home/ImpactStrip.tsx
+ * @description High-Level Commercial Impact Metrics Bar
+ * Showcases: 33+ Live Deliverables, Full-Spectrum Architecture, SDLC Leadership,
+ * and Dubai immediate availability status.
+ */
+
 import React from "react";
 import { Icons } from "@/components/ui/Icons";
 

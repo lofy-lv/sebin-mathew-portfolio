@@ -1,3 +1,9 @@
+/**
+ * @file src/app/not-found.tsx
+ * @description Custom 404 Route Not Found Page
+ * Provides branded error state with quick recovery links back to Home and Projects.
+ */
+
 import React from "react";
 import Link from "next/link";
 import { Icons } from "@/components/ui/Icons";

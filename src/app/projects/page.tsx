@@ -1,3 +1,10 @@
+/**
+ * @file src/app/projects/page.tsx
+ * @description Comprehensive Commercial Projects Directory
+ * Features: Dynamic Category Filters, Real-Time Search, Shipped Status Counters,
+ * and Responsive Grid with Branded Thumbnail Fallbacks.
+ */
+
 "use client";
 
 import React, { useState, useMemo, useEffect } from "react";

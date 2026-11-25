@@ -1,3 +1,9 @@
+/**
+ * @file src/data/site.ts
+ * @description Centralized Portfolio Site Configuration & Metadata
+ * Governs author profile, contact details, social URLs, capabilities, and delivery statistics.
+ */
+
 export const siteConfig = {
   name: "Sebin Mathew",
   title: "Technical Project Manager | Full Stack Developer",
