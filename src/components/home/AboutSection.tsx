@@ -95,11 +95,11 @@ export function AboutSection() {
 
           <div className="p-4 sm:p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col gap-1 shadow-sm">
             <div className="flex items-center gap-2 text-secondary">
-              <Icons.CheckCircle2 size={20} />
-              <span className="font-headline-sm text-xl sm:text-2xl font-bold text-on-surface">100%</span>
+              <Icons.KanbanSquare size={20} />
+              <span className="font-headline-sm text-xl sm:text-2xl font-bold text-on-surface">Agile & PRDs</span>
             </div>
-            <span className="font-label-md text-xs sm:text-sm font-semibold text-on-surface">On-Time SDLC Rate</span>
-            <span className="font-body-sm text-[11px] sm:text-xs text-on-surface-variant">Agile Sprints & Jira Delivery</span>
+            <span className="font-label-md text-xs sm:text-sm font-semibold text-on-surface">Sprint Governance</span>
+            <span className="font-body-sm text-[11px] sm:text-xs text-on-surface-variant">User Stories, Jira & Release UAT</span>
           </div>
 
           <div className="p-4 sm:p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col gap-1 shadow-sm">
