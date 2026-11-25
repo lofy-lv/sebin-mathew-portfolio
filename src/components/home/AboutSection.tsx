@@ -9,11 +9,11 @@ export function AboutSection() {
 
   return (
     <section className="w-full py-20 px-6 md:px-10 lg:px-14 bg-surface-container-lowest/50" id="about">
-      <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-14 items-stretch">
+      <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-14 items-start">
         {/* Left Column: Visual Portrait, Core Competencies & Social Proof */}
-        <div className="flex flex-col justify-between gap-5 h-full">
+        <div className="flex flex-col gap-5">
           {/* Portrait Card */}
-          <div className="relative rounded-3xl overflow-hidden bg-surface-container-low border border-outline-variant/40 shadow-2xl p-2.5 flex flex-col flex-1">
+          <div className="relative rounded-3xl overflow-hidden bg-surface-container-low border border-outline-variant/40 shadow-2xl p-2.5 flex flex-col">
             <div className="relative w-full aspect-[4/4.2] sm:aspect-[4/4] lg:aspect-[4/4.1] rounded-2xl overflow-hidden bg-surface-container-high">
               <Image
                 src={siteConfig.contact.aboutportraitPath}
@@ -98,7 +98,7 @@ export function AboutSection() {
         </div>
 
         {/* Right Column: Narrative, Experience Roadmap & Languages */}
-        <div className="flex flex-col justify-between gap-5 h-full">
+        <div className="flex flex-col gap-5">
           {/* Top: Narrative */}
           <div className="flex flex-col gap-3.5">
             <div className="flex flex-col gap-1.5">
