@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SkillCategory, SkillItem } from "@/types";
 import { skillCategories, skillsData } from "@/data/skills";
 import { BrandIcon } from "@/components/home/BrandIcon";
+import { Icons } from "@/components/ui/Icons";
 
 function SkillCard({ skill }: { skill: SkillItem }) {
   const [hovered, setHovered] = useState(false);
@@ -38,13 +39,24 @@ function SkillCard({ skill }: { skill: SkillItem }) {
   );
 }
 
+const INITIAL_MOBILE_COUNT = 8;
+const LOAD_MORE_COUNT = 8;
+
 export function SkillsMatrix() {
   const [activeCategory, setActiveCategory] = useState<SkillCategory>("all");
+  const [mobileVisibleCount, setMobileVisibleCount] = useState<number>(INITIAL_MOBILE_COUNT);
 
   const filteredSkills =
     activeCategory === "all"
       ? skillsData
       : skillsData.filter((s) => s.category === activeCategory);
+
+  // Reset pagination when category changes
+  useEffect(() => {
+    setMobileVisibleCount(INITIAL_MOBILE_COUNT);
+  }, [activeCategory]);
+
+  const hasMoreMobile = mobileVisibleCount < filteredSkills.length;
 
   return (
     <section className="w-full py-20 px-4 sm:px-6 md:px-10 lg:px-14" id="skills">
@@ -84,10 +96,34 @@ export function SkillsMatrix() {
 
         {/* 32-Tile Responsive Grid (4 per row on mobile, 6 on md, 8 on lg) */}
         <div className="w-full grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-y-6 sm:gap-y-8 gap-x-2 sm:gap-x-3 justify-items-center pt-4">
-          {filteredSkills.map((skill) => (
-            <SkillCard key={skill.id} skill={skill} />
-          ))}
+          {filteredSkills.map((skill, index) => {
+            const isHiddenOnMobile = index >= mobileVisibleCount;
+            return (
+              <div
+                key={skill.id}
+                className={`w-full flex justify-center ${isHiddenOnMobile ? "hidden md:flex" : "flex"}`}
+              >
+                <SkillCard skill={skill} />
+              </div>
+            );
+          })}
         </div>
+
+        {/* Mobile Load More Button */}
+        {hasMoreMobile && (
+          <div className="md:hidden flex flex-col items-center justify-center pt-2 gap-2.5 w-full">
+            <button
+              onClick={() => setMobileVisibleCount((prev) => prev + LOAD_MORE_COUNT)}
+              className="px-6 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/40 hover:border-primary/50 text-on-surface hover:text-primary font-headline-sm text-xs font-semibold transition-all shadow-sm active:scale-95 flex items-center gap-1.5 cursor-pointer"
+            >
+              <span>Load More Skills</span>
+              <Icons.ChevronDown size={16} />
+            </button>
+            <span className="font-label-sm text-[11px] text-on-surface-variant">
+              Showing {Math.min(mobileVisibleCount, filteredSkills.length)} of {filteredSkills.length} skills
+            </span>
+          </div>
+        )}
       </div>
     </section>
   );
