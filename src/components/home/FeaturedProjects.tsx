@@ -253,21 +253,11 @@ export function FeaturedProjects() {
           </div>
         </div>
 
-        {/* Directory CTA Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-surface-container-low border border-outline-variant/30">
-          <div className="flex items-center gap-2.5 text-on-surface-variant font-label-sm text-xs">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
-            </span>
-            <span>
-              Auto-moving showcase ({sortedProjects.length} live products) • Hover or swipe to pause, or use arrows
-            </span>
-          </div>
-
+        {/* Directory CTA */}
+        <div className="flex items-center justify-center pt-2">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md font-semibold transition-all shrink-0"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-surface-container-high hover:bg-primary text-primary hover:text-on-primary font-label-md text-label-md font-semibold border border-outline-variant/30 hover:border-transparent transition-all shadow-sm active:scale-95"
           >
             <span>Explore All 33 Projects Directory</span>
             <Icons.ArrowRight size={16} />
