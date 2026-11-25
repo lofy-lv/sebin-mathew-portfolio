@@ -62,7 +62,11 @@ export function ContactForm() {
 
   return (
     <div className="p-6 sm:p-8 rounded-3xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/30 shadow-xl flex flex-col justify-between h-full gap-6">
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1.5">
+        <div className="inline-flex items-center gap-2 px-3 py-1 self-start rounded-full bg-secondary/10 text-secondary border border-secondary/20 font-label-sm text-xs font-semibold uppercase tracking-wider">
+          <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Direct Message
+        </div>
         <h3 className="font-headline-sm text-headline-sm font-bold text-on-surface">
           Send a Direct Message
         </h3>

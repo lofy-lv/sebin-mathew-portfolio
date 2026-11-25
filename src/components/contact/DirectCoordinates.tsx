@@ -15,12 +15,16 @@ export function DirectCoordinates() {
 
   return (
     <div className="p-6 sm:p-8 rounded-3xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/30 shadow-xl flex flex-col justify-between h-full gap-6">
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1.5">
+        <div className="inline-flex items-center gap-2 px-3 py-1 self-start rounded-full bg-primary/10 text-primary border border-primary/20 font-label-sm text-xs font-semibold uppercase tracking-wider">
+          <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Direct Channels
+        </div>
         <h3 className="font-headline-sm text-headline-sm font-bold text-on-surface">
           Direct Coordinates
         </h3>
         <p className="font-body-sm text-body-sm text-on-surface-variant">
-          Immediate response for recruitment, contracts, and full-time leadership inquiries.
+          Immediate response for recruitment, enterprise contracts, and leadership inquiries.
         </p>
       </div>
 
