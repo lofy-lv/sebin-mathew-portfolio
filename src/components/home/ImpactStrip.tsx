@@ -30,7 +30,7 @@ export function ImpactStrip() {
     {
       value: "Dubai",
       title: "Dubai, UAE",
-      subtitle: "Available Immediately · Visit Visa",
+      subtitle: "Available Immediately · Zero Notice",
       icon: Icons.MapPin,
       gradient: "from-tertiary to-secondary",
       iconColor: "text-tertiary",

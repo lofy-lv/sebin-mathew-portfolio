@@ -51,7 +51,7 @@ export default function ContactPage() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
             </span>
             <span className="font-label-sm text-label-sm tracking-wide font-medium">
-              {siteConfig.availability.status} ({siteConfig.availability.visa})
+              {siteConfig.availability.status}
             </span>
           </div>
         </div>

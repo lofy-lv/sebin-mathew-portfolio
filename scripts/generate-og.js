@@ -92,7 +92,7 @@ const svg = `
 
   <!-- Bottom URL / Branding -->
   <text x="70" y="545" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="19" font-weight="500" fill="#64748B">
-    sebinmathew.com · Dubai, UAE · Visit Visa · Immediate Joiner
+    sebinmathew.com · Dubai, UAE · Immediate Joiner
   </text>
 </svg>
 `;

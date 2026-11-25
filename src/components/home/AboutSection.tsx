@@ -120,7 +120,7 @@ export function AboutSection() {
               <span className="font-headline-sm text-xl sm:text-2xl font-bold text-on-surface">Dubai, UAE</span>
             </div>
             <span className="font-label-md text-xs sm:text-sm font-semibold text-on-surface">Immediate Joining</span>
-            <span className="font-body-sm text-[11px] sm:text-xs text-on-surface-variant">Visit Visa · Zero Notice Period</span>
+            <span className="font-body-sm text-[11px] sm:text-xs text-on-surface-variant">Dubai, UAE · Zero Notice Period</span>
           </div>
         </div>
 
@@ -153,7 +153,7 @@ export function AboutSection() {
                     </span>
                   </div>
                   <span className="font-label-sm text-[11px] text-tertiary font-medium bg-tertiary/10 px-2.5 py-0.5 rounded-full border border-tertiary/20">
-                    Visit Visa
+                    Zero Notice Period
                   </span>
                 </div>
               </div>

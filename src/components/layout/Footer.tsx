@@ -126,13 +126,9 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright & Visa banner */}
+        {/* Copyright banner */}
         <div className="pt-space-md border-t border-outline-variant/15 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant">
           <p>© {new Date().getFullYear()} Sebin Mathew. All rights reserved.</p>
-          {/* <div className="flex items-center gap-2">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-            <span>Residence Visa & Immediate Onboarding in UAE</span>
-          </div> */}
         </div>
       </div>
     </footer>
