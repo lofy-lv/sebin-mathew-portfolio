@@ -5,7 +5,7 @@ export const siteConfig = {
   certifications: "Cloud",
   bio: "I've taken 33+ web, SaaS and mobile projects from first idea to live launch, with a hands-on background in MERN, Next.js, APIs and AI tools.",
   fullBio:
-    "My path began with a rigorous foundation in mechanical engineering, which honed a systematic approach to process architecture, systems thinking, and technical problem solving, before transitioning into full-stack software development with the MERN stack and Next.js.\n\nToday, as a Technical Project Manager based in Dubai, I bridge complex stakeholder visions with cross-functional engineering execution. Having directed 33+ commercial software releases across web, SaaS, and mobile platforms, I specialize in authoring air-tight PRDs, structuring agile sprint cadences in Jira, leading UAT verification, and ensuring zero-downtime production deployments.",
+    "My path began with a dedicated foundation in mechanical engineering, which honed a systematic approach to product research, system architecture, and technical problem solving, before transitioning into full-stack software development with the MERN stack and Next.js.\n\nToday, as a Technical Project Manager based in Dubai, I manage client relationships and lead cross-functional engineering teams across 33+ live web, SaaS, and mobile releases. From deep market research and scalable end-to-end system architecture to authoring air-tight PRDs, structuring agile sprints in Jira, and leading UAT verification, I ensure zero-downtime production deployments.",
   availability: {
     status: "Available Immediately in Dubai",
     visa: "Visit Visa",
@@ -39,9 +39,10 @@ export const siteConfig = {
   capabilities: [
     "Requirements & PRDs",
     "Agile Delivery",
-    "Stakeholder Communication",
+    "Full-Stack Development",
     "QA & UAT",
-    "Hosting & DevOps Coordination",
+    "Cloud & DevOps",
+    "Stakeholder Alignment",
   ],
   stats: {
     totalProjects: 33,
