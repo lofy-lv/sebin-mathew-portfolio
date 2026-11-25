@@ -3,9 +3,9 @@ import { SkillCategory, SkillItem } from "@/types";
 export const skillCategories: { id: SkillCategory; label: string }[] = [
   { id: "all", label: "All Stack (32)" },
   { id: "agile", label: "Agile & PM (8)" },
-  { id: "code", label: "Code & APIs (10)" },
+  { id: "code", label: "Code & APIs (11)" },
   { id: "ai", label: "AI Workflows (7)" },
-  { id: "devops", label: "Cloud & DevOps (7)" },
+  { id: "devops", label: "Cloud & DevOps (6)" },
 ];
 
 export const skillsData: SkillItem[] = [
@@ -41,10 +41,10 @@ export const skillsData: SkillItem[] = [
     brandColor: "#FFFFFF",
   },
   {
-    id: "prd-space",
-    name: "PRD Space",
+    id: "prd-specs",
+    name: "PRD & Specs",
     category: "agile",
-    iconKey: "prd-space",
+    iconKey: "prd-specs",
     brandColor: "#D0BCFF",
   },
   {
@@ -130,7 +130,7 @@ export const skillsData: SkillItem[] = [
   },
 
   // ==========================================
-  // ROW 3: Developer Tools & AI Engineering (8 items)
+  // ROW 3: Developer Tools, Auth & AI (8 items)
   // ==========================================
   {
     id: "postman",
@@ -145,6 +145,13 @@ export const skillsData: SkillItem[] = [
     category: "code",
     iconKey: "github",
     brandColor: "#F05032",
+  },
+  {
+    id: "rbac-auth",
+    name: "RBAC & Auth",
+    category: "code",
+    iconKey: "rbac-auth",
+    brandColor: "#3CDDC7",
   },
   {
     id: "cursor",
@@ -181,16 +188,9 @@ export const skillsData: SkillItem[] = [
     iconKey: "antigravity",
     brandColor: "#8B5CF6",
   },
-  {
-    id: "prompt-eng",
-    name: "Prompt Eng",
-    category: "ai",
-    iconKey: "prompt-eng",
-    brandColor: "#D0BCFF",
-  },
 
   // ==========================================
-  // ROW 4: Systems, Cloud & Infrastructure (8 items)
+  // ROW 4: AI Protocol, Automation & Cloud DevOps (8 items)
   // ==========================================
   {
     id: "mcp-protocol",
@@ -202,7 +202,7 @@ export const skillsData: SkillItem[] = [
   {
     id: "n8n",
     name: "n8n Automation",
-    category: "devops",
+    category: "ai",
     iconKey: "n8n",
     brandColor: "#EA4B71",
   },
@@ -214,11 +214,18 @@ export const skillsData: SkillItem[] = [
     brandColor: "#F38020",
   },
   {
-    id: "cpanel",
-    name: "cPanel & WHM",
+    id: "vercel",
+    name: "Vercel",
     category: "devops",
-    iconKey: "cpanel",
-    brandColor: "#FF6C2C",
+    iconKey: "vercel",
+    brandColor: "#FFFFFF",
+  },
+  {
+    id: "netlify",
+    name: "Netlify",
+    category: "devops",
+    iconKey: "netlify",
+    brandColor: "#00C7B7",
   },
   {
     id: "hostinger",
@@ -228,24 +235,17 @@ export const skillsData: SkillItem[] = [
     brandColor: "#673DE6",
   },
   {
+    id: "cpanel",
+    name: "cPanel & WHM",
+    category: "devops",
+    iconKey: "cpanel",
+    brandColor: "#FF6C2C",
+  },
+  {
     id: "godaddy",
     name: "GoDaddy",
     category: "devops",
     iconKey: "godaddy",
     brandColor: "#1BDBDB",
-  },
-  {
-    id: "ssl-security",
-    name: "SSL & Security",
-    category: "devops",
-    iconKey: "ssl-security",
-    brandColor: "#3CDDC7",
-  },
-  {
-    id: "dns-config",
-    name: "DNS Config",
-    category: "devops",
-    iconKey: "dns-config",
-    brandColor: "#FFB783",
   },
 ];

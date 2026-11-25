@@ -19,6 +19,8 @@ import {
   SiCpanel,
   SiHostinger,
   SiGodaddy,
+  SiVercel,
+  SiNetlify,
 } from "react-icons/si";
 import { RiOpenaiFill } from "react-icons/ri";
 import {
@@ -29,6 +31,7 @@ import {
   Sparkles,
   Lock,
   Globe,
+  ShieldCheck,
 } from "lucide-react";
 
 interface BrandIconProps {
@@ -170,6 +173,7 @@ export function BrandIcon({ iconKey, size = 28, className = "" }: BrandIconProps
       return <SiTrello size={size} className={className} />;
     case "notion":
       return <SiNotion size={size} className={className} />;
+    case "prd-specs":
     case "prd-space":
       return <FileText size={size} className={className} />;
     case "user-stories":
@@ -197,11 +201,15 @@ export function BrandIcon({ iconKey, size = 28, className = "" }: BrandIconProps
     case "rest-api":
       return <RestApiIcon size={size} className={className} />;
 
-    // Engineering & AI Workflows
+    // Developer Tools & Auth
     case "postman":
       return <SiPostman size={size} className={className} />;
     case "github":
       return <SiGithub size={size} className={className} />;
+    case "rbac-auth":
+      return <ShieldCheck size={size} className={className} />;
+
+    // AI Engineering & Workflows
     case "cursor":
       return <CursorIcon size={size} className={className} />;
     case "claude":
@@ -214,18 +222,22 @@ export function BrandIcon({ iconKey, size = 28, className = "" }: BrandIconProps
       return <AntigravityIcon size={size} className={className} />;
     case "prompt-eng":
       return <Sparkles size={size} className={className} />;
-
-    // Systems, Cloud & Infrastructure
     case "mcp-protocol":
       return <McpIcon size={size} className={className} />;
     case "n8n":
       return <SiN8N size={size} className={className} />;
+
+    // Systems, Cloud & Infrastructure
     case "cloudflare":
       return <SiCloudflare size={size} className={className} />;
-    case "cpanel":
-      return <SiCpanel size={size} className={className} />;
+    case "vercel":
+      return <SiVercel size={size} className={className} />;
+    case "netlify":
+      return <SiNetlify size={size} className={className} />;
     case "hostinger":
       return <SiHostinger size={size} className={className} />;
+    case "cpanel":
+      return <SiCpanel size={size} className={className} />;
     case "godaddy":
       return <SiGodaddy size={size} className={className} />;
     case "ssl-security":

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { SkillCategory, SkillItem } from "@/types";
 import { skillCategories, skillsData } from "@/data/skills";
 import { BrandIcon } from "@/components/home/BrandIcon";
@@ -41,6 +41,16 @@ function SkillCard({ skill }: { skill: SkillItem }) {
 export function SkillsMatrix() {
   const [activeCategory, setActiveCategory] = useState<SkillCategory>("all");
 
+  const categoryCounts = useMemo(() => {
+    return {
+      all: skillsData.length,
+      agile: skillsData.filter((s) => s.category === "agile").length,
+      code: skillsData.filter((s) => s.category === "code").length,
+      ai: skillsData.filter((s) => s.category === "ai").length,
+      devops: skillsData.filter((s) => s.category === "devops").length,
+    };
+  }, []);
+
   const filteredSkills =
     activeCategory === "all"
       ? skillsData
@@ -62,10 +72,12 @@ export function SkillsMatrix() {
           </p>
         </div>
 
-        {/* Tab Switcher */}
+        {/* Tab Switcher with Dynamic Counts */}
         <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 p-1.5 rounded-3xl sm:rounded-full bg-surface-container-low/90 backdrop-blur-md border border-outline-variant/40 shadow-md">
           {skillCategories.map((cat) => {
             const isActive = activeCategory === cat.id;
+            const count = categoryCounts[cat.id];
+            const baseName = cat.label.replace(/\s*\(\d+\)/, "");
             return (
               <button
                 key={cat.id}
@@ -76,7 +88,7 @@ export function SkillsMatrix() {
                     : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-medium"
                 }`}
               >
-                {cat.label}
+                {baseName} ({count})
               </button>
             );
           })}
