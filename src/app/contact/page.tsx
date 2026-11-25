@@ -120,7 +120,7 @@ export default function ContactPage() {
                     Versatile Engagement
                   </span>
                   <span className="font-body-sm text-body-sm text-on-surface-variant">
-                    Full-time Staff, Contract TPM, or Tech Advisory
+                    Technical Project Manager, or Full Stack Developer 
                   </span>
                 </div>
               </div>

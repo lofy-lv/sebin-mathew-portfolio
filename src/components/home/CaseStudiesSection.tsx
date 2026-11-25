@@ -102,6 +102,32 @@ export function CaseStudiesSection() {
         { label: "Peak Concurrency", value: "Zero Drops" },
       ],
     },
+    {
+      id: "millijobs",
+      tags: ["Talent Marketplace", "Search Optimization", "MERN & REST APIs"],
+      tagColor: "bg-[#38BDF8]/20 text-[#38BDF8]",
+      buttonColor: "text-[#38BDF8] hover:bg-[#38BDF8] hover:text-on-primary",
+      title: "MilliJobs: Scalable Recruitment Engine & Employer Portal",
+      role: "Technical Project Manager",
+      organization: "Esight Business Solutions",
+      description:
+        "Directed product discovery, full-text job indexing architecture, and candidate pipeline tracking, optimizing search speed and scaling employer job postings.",
+      problem:
+        "Recruiters faced dropped applicant submissions and high bounce rates due to unindexed database queries and lack of structured application pipelines during peak hiring seasons.",
+      solution:
+        "Architected full-text search indexing with Express & MongoDB, engineered modular recruiter dashboards with Kanban candidate tracking, and governed weekly agile releases with automated CI/CD.",
+      deliverables: [
+        "Comprehensive Functional PRD covering candidate application funnels & recruiter portals",
+        "High-performance MongoDB indexing strategy achieving sub-100ms multi-filter search",
+        "Candidate pipeline Kanban board specs with automated status notification triggers",
+        "Rigorous end-to-end UAT regression test suites across mobile and desktop browsers",
+      ],
+      metrics: [
+        { label: "Search Latency", value: "< 100ms" },
+        { label: "Funnel Conversion", value: "+45%" },
+        { label: "Application Volume", value: "100k+" },
+      ],
+    },
   ];
 
   return (
@@ -123,60 +149,81 @@ export function CaseStudiesSection() {
           </p>
         </div>
 
-        {/* 3 Large Horizontal Glass Cards */}
-        <div className="flex flex-col gap-6">
+        {/* 4 Case Studies in a 2x2 Responsive Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
           {caseStudies.map((cs) => (
             <div
               key={cs.id}
-              className="p-6 lg:p-8 rounded-3xl bg-surface-container-low/80 backdrop-blur-xl border border-outline-variant/30 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 hover:bg-surface-container-low hover:border-primary/50 transition-all duration-300 shadow-xl"
+              className="p-6 sm:p-7 lg:p-8 rounded-3xl bg-surface-container-low/90 backdrop-blur-xl border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 flex flex-col justify-between gap-6 group"
             >
-              <div className="flex flex-col gap-3.5 max-w-2xl">
-                {/* Attribution Header Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 self-start">
-                  <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-                  <span className="font-label-sm text-[11px] text-tertiary font-medium">
-                    Delivered as Technical Project Manager at Esight Business Solutions
+              {/* Card Top: Attribution Badge & Tags */}
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant/30">
+                    <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    <span className="font-label-sm text-[11px] text-tertiary font-medium">
+                      Technical PM @ Esight
+                    </span>
+                  </div>
+
+                  <span className={`px-2.5 py-0.5 rounded-full font-label-sm text-[11px] font-semibold ${cs.tagColor}`}>
+                    {cs.tags[0]}
                   </span>
                 </div>
 
-                <div className="flex flex-wrap gap-2">
-                  <span
-                    className={`px-3 py-1 rounded-full font-label-sm text-label-sm font-semibold ${cs.tagColor}`}
-                  >
-                    {cs.tags[0]}
-                  </span>
+                {/* Title */}
+                <h3 className="font-display text-headline-sm sm:text-headline-md font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  {cs.title}
+                </h3>
+
+                {/* Description */}
+                <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed line-clamp-3">
+                  {cs.description}
+                </p>
+
+                {/* Secondary Tags */}
+                <div className="flex flex-wrap gap-1.5 pt-1">
                   {cs.tags.slice(1).map((t, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"
+                      className="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]"
                     >
                       {t}
                     </span>
                   ))}
                 </div>
-
-                <h3 className="font-display text-headline-md font-bold text-on-surface">
-                  {cs.title}
-                </h3>
-
-                <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                  {cs.description}
-                </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row lg:flex-col gap-2 shrink-0 self-start lg:self-center">
+              {/* Card Mid: Key Impact Metrics Bento Strip */}
+              <div className="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-surface-container/70 border border-outline-variant/20 text-center">
+                {cs.metrics.map((m, i) => (
+                  <div key={i} className="flex flex-col items-center justify-center">
+                    <span className="font-display text-label-md sm:text-headline-sm font-bold text-on-surface">
+                      {m.value}
+                    </span>
+                    <span className="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mt-0.5 truncate max-w-full px-1">
+                      {m.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Card Bottom: Actions */}
+              <div className="flex items-center justify-between gap-3 pt-3 border-t border-outline-variant/20">
                 <button
                   onClick={() => setSelectedCase(cs)}
-                  className={`inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-surface-container-high font-label-md text-label-md font-semibold transition-all whitespace-nowrap ${cs.buttonColor}`}
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-high font-label-md text-xs sm:text-label-md font-semibold transition-all ${cs.buttonColor} cursor-pointer`}
                 >
                   <span>Read Breakdown</span>
-                  <Icons.ArrowRight size={16} />
+                  <Icons.ArrowRight size={15} />
                 </button>
+
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 text-on-surface-variant hover:text-on-surface font-label-sm text-xs transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-sm text-xs transition-colors"
                 >
                   <span>Discuss Project</span>
+                  <Icons.ArrowRight size={12} />
                 </Link>
               </div>
             </div>

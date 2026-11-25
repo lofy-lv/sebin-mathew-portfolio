@@ -132,9 +132,9 @@ export function ContactForm() {
                 onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                 className="w-full px-4 py-3 rounded-xl bg-surface-container-high border border-outline-variant/30 text-on-surface focus:outline-none focus:ring-2 focus:ring-primary font-body-md text-body-md"
               >
-                <option value="Full-Time TPM / Lead">Full-Time Technical Project Manager (Dubai/Remote)</option>
-                <option value="Contract / Sprint Delivery">Contract / Sprint Project Oversight</option>
-                <option value="Fractional Tech BA / PRD Writing">Fractional Technical BA & PRD Architecture</option>
+                <option value="Full-Time TPM / Product Owner">Full-Time Role: Technical Project Manager / Product Owner</option>
+<option value="Full-Time Full-Stack / Next.js Developer">Full-Time Role: Full-Stack / Next.js Developer</option>
+<option value="Freelance / Project Inquiry">Freelance / Project Inquiry</option>
                 <option value="General Exploration">General Discussion / Tech Consultation</option>
               </select>
             </div>
