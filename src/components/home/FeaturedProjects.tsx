@@ -20,15 +20,6 @@ export function FeaturedProjects() {
     ];
   }, []);
 
-  const additionalDeployments = [
-    "tribesalon.in",
-    "gaspetworld.com",
-    "harmanmotors.in",
-    "signaturehardwares.com",
-    "drksaesthetics.com",
-    "comorinsolar.com",
-  ];
-
   const checkScroll = useCallback(() => {
     const el = scrollRef.current;
     if (!el) return;
@@ -262,26 +253,6 @@ export function FeaturedProjects() {
             <span>Explore All 33 Projects Directory</span>
             <Icons.ArrowRight size={16} />
           </Link>
-        </div>
-
-        {/* Additional Verified Deployments Strip */}
-        <div className="pt-4 border-t border-outline-variant/40 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center">
-          <span className="font-label-sm text-xs text-on-surface-variant uppercase tracking-wider font-semibold">
-            Additional Verified Deployments:
-          </span>
-          {additionalDeployments.map((domain, i) => (
-            <React.Fragment key={domain}>
-              <Link
-                href="/projects"
-                className="font-label-sm text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer"
-              >
-                {domain}
-              </Link>
-              {i < additionalDeployments.length - 1 && (
-                <span className="text-outline-variant/40">•</span>
-              )}
-            </React.Fragment>
-          ))}
         </div>
       </div>
     </section>
